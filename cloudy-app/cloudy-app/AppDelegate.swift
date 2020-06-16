@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Atrasa o tempo de apresentação do Launch Screen
+        Thread.sleep(forTimeInterval: 3.0)
         // Override point for customization after application launch.
         return true
     }
