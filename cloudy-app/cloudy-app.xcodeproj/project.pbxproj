@@ -78,6 +78,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE335BE824A2907D003287AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE335BED24A29402003287AF /* Settings */,
+				BE335BEC24A293E7003287AF /* Database */,
+				BE335BEB24A293D2003287AF /* Classes */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE335BE924A290A8003287AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEA262DC24995BCE007F147C /* Main.storyboard */,
+				BEA262E424995BD2007F147C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE335BEA24A2910B003287AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEA262D624995BCE007F147C /* AppDelegate.swift */,
+				BEA262DA24995BCE007F147C /* ViewController.swift */,
+				BEA262D824995BCE007F147C /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE335BEB24A293D2003287AF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BE335BEC24A293E7003287AF /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BEA262DF24995BCE007F147C /* cloudy_app.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		BE335BED24A29402003287AF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BEA262E224995BD2007F147C /* Assets.xcassets */,
+				BEA262E724995BD2007F147C /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		BEA262CA24995BCE007F147C = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +154,9 @@
 		BEA262D524995BCE007F147C /* cloudy-app */ = {
 			isa = PBXGroup;
 			children = (
-				BEA262D624995BCE007F147C /* AppDelegate.swift */,
-				BEA262D824995BCE007F147C /* SceneDelegate.swift */,
-				BEA262DA24995BCE007F147C /* ViewController.swift */,
-				BEA262DC24995BCE007F147C /* Main.storyboard */,
-				BEA262E224995BD2007F147C /* Assets.xcassets */,
-				BEA262E424995BD2007F147C /* LaunchScreen.storyboard */,
-				BEA262E724995BD2007F147C /* Info.plist */,
-				BEA262DF24995BCE007F147C /* cloudy_app.xcdatamodeld */,
+				BE335BE824A2907D003287AF /* Model */,
+				BE335BE924A290A8003287AF /* View */,
+				BE335BEA24A2910B003287AF /* Controller */,
 			);
 			path = "cloudy-app";
 			sourceTree = "<group>";
@@ -354,6 +402,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -414,6 +463,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
