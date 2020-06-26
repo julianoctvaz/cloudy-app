@@ -10,13 +10,24 @@ import UIKit
 
 class DataViewController: UIViewController {
 
+    @IBOutlet weak var displayLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var skipButton: UIButton!
+    
+    var displayText: String!
+    var index: Int?
+    var displayImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        displayLabel.text = displayText
+        image.image = displayImage
+        image.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
 
         // Do any additional setup after loading the view.
     }
-    
 
+    
     /*
     // MARK: - Navigation
 

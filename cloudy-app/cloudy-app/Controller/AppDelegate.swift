@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Atrasa o tempo de apresentação do Launch Screen
         Thread.sleep(forTimeInterval: 3.0)
         // Override point for customization after application launch.
+        
+        let pageControl = UIPageControl.appearance()
+        // Color Literal
+        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.4358717203, green: 0.5370141268, blue: 0.8963852525, alpha: 1)
+        pageControl.pageIndicatorTintColor = .white
+        
         return true
     }
 

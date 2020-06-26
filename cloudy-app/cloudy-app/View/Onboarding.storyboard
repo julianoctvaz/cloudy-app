@@ -77,6 +77,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xaA-n5-Gau"/>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="ho8-EB-Wsx" id="vrY-mC-c6K"/>
+                        <outlet property="image" destination="XbP-tm-tPZ" id="NAx-VX-FnN"/>
+                        <outlet property="skipButton" destination="iVG-WF-UjY" id="b2U-pu-4Q2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjI-YX-WBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
