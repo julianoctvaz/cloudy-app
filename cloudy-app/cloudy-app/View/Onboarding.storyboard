@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="qad-lu-Lh9">
+            <objects>
+                <viewController id="BWm-7A-05x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fLL-a9-oQo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4I-ng-qVN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SOa-3M-zB0" firstAttribute="trailing" secondItem="x4I-ng-qVN" secondAttribute="trailing" id="4Lz-L9-Hwq"/>
+                            <constraint firstAttribute="bottom" secondItem="x4I-ng-qVN" secondAttribute="bottom" id="JK4-1R-dWf"/>
+                            <constraint firstItem="x4I-ng-qVN" firstAttribute="leading" secondItem="SOa-3M-zB0" secondAttribute="leading" id="fCD-R2-tRV"/>
+                            <constraint firstItem="x4I-ng-qVN" firstAttribute="top" secondItem="fLL-a9-oQo" secondAttribute="top" id="rqb-vz-YSM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SOa-3M-zB0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1N2-cU-QNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="185"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="gft-Su-edT">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" id="BqZ-y7-g6m" customClass="DataViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xC1-XA-b1V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="WYv-Km-PtX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbP-tm-tPZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="509"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho8-EB-Wsx">
+                                <rect key="frame" x="30" y="580" width="351" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVG-WF-UjY">
+                                <rect key="frame" x="322" y="36" width="56" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="PULAR">
+                                    <color key="titleColor" red="0.35322618480000001" green="0.3619004488" blue="0.3977993131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iVG-WF-UjY" firstAttribute="top" secondItem="xC1-XA-b1V" secondAttribute="top" constant="36" id="2ir-Do-WZ3"/>
+                            <constraint firstItem="WYv-Km-PtX" firstAttribute="trailing" secondItem="xaA-n5-Gau" secondAttribute="trailing" id="8xL-SA-Dst"/>
+                            <constraint firstItem="XbP-tm-tPZ" firstAttribute="trailing" secondItem="xaA-n5-Gau" secondAttribute="trailing" id="9Hu-bs-hjk"/>
+                            <constraint firstItem="WYv-Km-PtX" firstAttribute="leading" secondItem="xaA-n5-Gau" secondAttribute="leading" id="GnF-7o-FqP"/>
+                            <constraint firstItem="xaA-n5-Gau" firstAttribute="trailing" secondItem="iVG-WF-UjY" secondAttribute="trailing" constant="36" id="P4g-Uq-cZw"/>
+                            <constraint firstItem="XbP-tm-tPZ" firstAttribute="leading" secondItem="xaA-n5-Gau" secondAttribute="leading" id="lnh-ok-Jsa"/>
+                            <constraint firstItem="WYv-Km-PtX" firstAttribute="top" secondItem="xC1-XA-b1V" secondAttribute="top" id="rsU-ug-hhr"/>
+                            <constraint firstAttribute="bottom" secondItem="WYv-Km-PtX" secondAttribute="bottom" id="zn7-gK-gAN"/>
+                            <constraint firstItem="XbP-tm-tPZ" firstAttribute="top" secondItem="xC1-XA-b1V" secondAttribute="top" id="znS-M6-ulC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xaA-n5-Gau"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DjI-YX-WBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="185"/>
+        </scene>
+        <!--Custom Page View Controller-->
+        <scene sceneID="zab-p3-QsI">
+            <objects>
+                <pageViewController storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5j8-1M-Wiy" customClass="CustomPageViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z57-yf-IiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1329" y="185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background-gradient" width="828" height="1792"/>
+    </resources>
+</document>

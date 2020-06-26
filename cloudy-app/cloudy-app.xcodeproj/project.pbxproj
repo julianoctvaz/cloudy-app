@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */; };
+		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
+		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
 		BEA262D724995BCE007F147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262D624995BCE007F147C /* AppDelegate.swift */; };
 		BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262D824995BCE007F147C /* SceneDelegate.swift */; };
 		BEA262DB24995BCE007F147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262DA24995BCE007F147C /* ViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		BEA262D324995BCE007F147C /* cloudy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cloudy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA262D624995BCE007F147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA262D824995BCE007F147C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 			children = (
 				BEA262DC24995BCE007F147C /* Main.storyboard */,
 				BEA262E424995BD2007F147C /* LaunchScreen.storyboard */,
+				BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 				BEA262D624995BCE007F147C /* AppDelegate.swift */,
 				BEA262DA24995BCE007F147C /* ViewController.swift */,
 				BEA262D824995BCE007F147C /* SceneDelegate.swift */,
+				BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */,
+				BE8DB40124A6132100ADB966 /* DataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				BEA262E224995BD2007F147C /* Assets.xcassets */,
-				BEA262E724995BD2007F147C /* Info.plist */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 		BEA262D524995BCE007F147C /* cloudy-app */ = {
 			isa = PBXGroup;
 			children = (
+				BEA262E724995BD2007F147C /* Info.plist */,
 				BE335BE824A2907D003287AF /* Model */,
 				BE335BE924A290A8003287AF /* View */,
 				BE335BEA24A2910B003287AF /* Controller */,
@@ -286,6 +295,7 @@
 				BEA262E624995BD2007F147C /* LaunchScreen.storyboard in Resources */,
 				BEA262E324995BD2007F147C /* Assets.xcassets in Resources */,
 				BEA262DE24995BCE007F147C /* Main.storyboard in Resources */,
+				BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +323,8 @@
 				BEA262DB24995BCE007F147C /* ViewController.swift in Sources */,
 				BEA262D724995BCE007F147C /* AppDelegate.swift in Sources */,
 				BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */,
+				BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */,
+				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
 				BEA262E124995BCE007F147C /* cloudy_app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
