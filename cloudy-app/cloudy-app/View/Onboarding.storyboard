@@ -64,6 +64,9 @@
                                 <state key="normal" title="PULAR">
                                     <color key="titleColor" red="0.35322618480000001" green="0.3619004488" blue="0.3977993131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Z17-IN-kSn" kind="show" id="a1b-mB-5d0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,6 +78,7 @@
                             <constraint firstItem="xaA-n5-Gau" firstAttribute="trailing" secondItem="iVG-WF-UjY" secondAttribute="trailing" constant="36" id="P4g-Uq-cZw"/>
                             <constraint firstItem="XbP-tm-tPZ" firstAttribute="leading" secondItem="xaA-n5-Gau" secondAttribute="leading" id="lnh-ok-Jsa"/>
                             <constraint firstItem="WYv-Km-PtX" firstAttribute="top" secondItem="xC1-XA-b1V" secondAttribute="top" id="rsU-ug-hhr"/>
+                            <constraint firstAttribute="bottom" secondItem="WYv-Km-PtX" secondAttribute="bottom" id="wNv-CJ-mUL"/>
                             <constraint firstAttribute="bottom" secondItem="WYv-Km-PtX" secondAttribute="bottom" id="zn7-gK-gAN"/>
                             <constraint firstItem="XbP-tm-tPZ" firstAttribute="top" secondItem="xC1-XA-b1V" secondAttribute="top" id="znS-M6-ulC"/>
                         </constraints>
@@ -97,6 +101,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z57-yf-IiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1329" y="185"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="kFU-EH-bJZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Z17-IN-kSn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ny4-Ot-jdX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugi-BY-ePS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="78"/>
         </scene>
     </scenes>
     <resources>
