@@ -56,7 +56,7 @@ class OnboardingDelegateViewController: UIViewController {
             
             contentView.addSubview(pageViewController.view)
             
-            let views: [String: Any] = ["pageView": pageViewController.view]
+            let views: [String: Any] = ["pageView": pageViewController.view as Any]
             
             //A subview inicia no mesmo ponto que a view que a contém
             contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|",
@@ -88,6 +88,13 @@ class OnboardingDelegateViewController: UIViewController {
             dataViewController.index = index
             dataViewController.displayText = dataSource[index]
             dataViewController.displayImage = dataSourceImage[index]
+            
+            // Verifica se é a última tela
+            if index == dataSource.count-1 {
+                dataViewController.lastScreen = true
+            } else {
+                dataViewController.lastScreen = false
+            }
                  
             return dataViewController
         }

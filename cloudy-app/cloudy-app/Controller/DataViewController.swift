@@ -13,18 +13,34 @@ class DataViewController: UIViewController {
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
     
     var displayText: String!
     var index: Int?
     var displayImage: UIImage!
+    var lastScreen: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayLabel.text = displayText
         image.image = displayImage
-        image.frame = CGRect(x: 0, y: 0, width: 414, height: 896)
-
+        image.frame = CGRect(x: 0, y: 0, width: 414, height: 509)
+        
+        // Se for a última tela, mostra botão começar
+        if lastScreen == true {
+            showStartButton()
+        } else {
+            hideStartButton()
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func showStartButton() {
+        self.startButton.isHidden = false
+    }
+    
+    func hideStartButton() {
+        self.startButton.isHidden = true
     }
 
     
