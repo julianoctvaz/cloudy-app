@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE6DB4AA24AA32010002E56F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4A924AA32010002E56F /* TabBar.storyboard */; };
+		BE6DB4AC24AA32720002E56F /* PausasTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AB24AA32720002E56F /* PausasTabBar.storyboard */; };
+		BE6DB4AE24AA32840002E56F /* SeuCeuTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */; };
+		BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */; };
+		BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4B124AA3BD70002E56F /* Timer.storyboard */; };
 		BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */; };
 		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
 		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE6DB4A924AA32010002E56F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		BE6DB4AB24AA32720002E56F /* PausasTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PausasTabBar.storyboard; sourceTree = "<group>"; };
+		BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeuCeuTabBar.storyboard; sourceTree = "<group>"; };
+		BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoceTabBar.storyboard; sourceTree = "<group>"; };
+		BE6DB4B124AA3BD70002E56F /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +112,11 @@
 				BEA262DC24995BCE007F147C /* Main.storyboard */,
 				BEA262E424995BD2007F147C /* LaunchScreen.storyboard */,
 				BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */,
+				BE6DB4A924AA32010002E56F /* TabBar.storyboard */,
+				BE6DB4AB24AA32720002E56F /* PausasTabBar.storyboard */,
+				BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */,
+				BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */,
+				BE6DB4B124AA3BD70002E56F /* Timer.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,8 +310,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6DB4AA24AA32010002E56F /* TabBar.storyboard in Resources */,
+				BE6DB4AE24AA32840002E56F /* SeuCeuTabBar.storyboard in Resources */,
+				BE6DB4AC24AA32720002E56F /* PausasTabBar.storyboard in Resources */,
 				BEA262E624995BD2007F147C /* LaunchScreen.storyboard in Resources */,
+				BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */,
 				BEA262E324995BD2007F147C /* Assets.xcassets in Resources */,
+				BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */,
 				BEA262DE24995BCE007F147C /* Main.storyboard in Resources */,
 				BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */,
 			);
