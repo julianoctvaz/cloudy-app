@@ -29,7 +29,7 @@
         <scene sceneID="eHF-a3-Jpx">
             <objects>
                 <viewControllerPlaceholder storyboardName="PausasTabBar" id="IvN-HZ-CNV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LlC-PY-uLc"/>
+                    <tabBarItem key="tabBarItem" title="Pausas" id="LlC-PY-uLc"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DY7-Ti-PD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +39,7 @@
         <scene sceneID="XNv-E1-H35">
             <objects>
                 <viewControllerPlaceholder storyboardName="SeuCeuTabBar" id="St7-Qa-Sht" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qcb-Zp-lZe"/>
+                    <tabBarItem key="tabBarItem" title="Seu Céu" id="qcb-Zp-lZe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCe-yq-PAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +49,7 @@
         <scene sceneID="eE6-RB-8yG">
             <objects>
                 <viewControllerPlaceholder storyboardName="VoceTabBar" id="dfL-zv-507" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Vnr-XF-Npn"/>
+                    <tabBarItem key="tabBarItem" title="Você" id="Vnr-XF-Npn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8X-UW-HCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
