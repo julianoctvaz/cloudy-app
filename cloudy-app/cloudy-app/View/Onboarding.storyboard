@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="45" id="1hV-jT-gSz"/>
                                     <constraint firstAttribute="width" constant="180" id="c97-7z-0U6"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="button-começar-onboarding"/>
+                                <state key="normal" backgroundImage="comecar-button"/>
                                 <connections>
                                     <segue destination="Z17-IN-kSn" kind="show" id="ryE-eL-grs"/>
                                 </connections>
@@ -137,6 +137,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background-gradient" width="828" height="1792"/>
-        <image name="button-começar-onboarding" width="360" height="90"/>
+        <image name="comecar-button" width="540" height="135"/>
     </resources>
 </document>
