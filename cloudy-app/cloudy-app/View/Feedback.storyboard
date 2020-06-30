@@ -7,20 +7,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Feedback View Controller-->
         <scene sceneID="liX-Lk-Eao">
             <objects>
-                <viewController id="YGL-eD-0nc" sceneMemberID="viewController">
+                <viewController id="YGL-eD-0nc" customClass="FeedbackViewController" customModule="Cloudy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxQ-WP-YB4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback-background" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-ze-7uX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-BY-K8d">
+                                <rect key="frame" x="187" y="856" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UvD-n2-0yS"/>
+                                    <constraint firstAttribute="width" constant="40" id="gIZ-wp-4UN"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gta-mB-cSS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gta-mB-cSS" firstAttribute="bottom" secondItem="wxQ-WP-YB4" secondAttribute="bottom" id="2JO-ls-nMK"/>
+                            <constraint firstItem="YQu-BY-K8d" firstAttribute="centerX" secondItem="wxQ-WP-YB4" secondAttribute="centerX" id="6DF-Vc-GOJ"/>
+                            <constraint firstItem="tjT-ze-7uX" firstAttribute="top" secondItem="wxQ-WP-YB4" secondAttribute="top" id="BOZ-dq-Sc5"/>
+                            <constraint firstItem="gta-mB-cSS" firstAttribute="top" secondItem="wxQ-WP-YB4" secondAttribute="top" id="EYn-1P-1HF"/>
+                            <constraint firstItem="pMv-Xr-FrO" firstAttribute="trailing" secondItem="gta-mB-cSS" secondAttribute="trailing" id="F4I-9q-Y7o"/>
+                            <constraint firstItem="YQu-BY-K8d" firstAttribute="bottom" secondItem="tjT-ze-7uX" secondAttribute="bottom" id="FtK-fW-vfB"/>
+                            <constraint firstItem="tjT-ze-7uX" firstAttribute="bottom" secondItem="wxQ-WP-YB4" secondAttribute="bottom" id="O1y-vO-FHZ"/>
+                            <constraint firstItem="tjT-ze-7uX" firstAttribute="trailing" secondItem="pMv-Xr-FrO" secondAttribute="trailing" id="Qr2-dU-GGK"/>
+                            <constraint firstItem="tjT-ze-7uX" firstAttribute="leading" secondItem="pMv-Xr-FrO" secondAttribute="leading" id="kHy-Tz-kBy"/>
+                            <constraint firstItem="gta-mB-cSS" firstAttribute="leading" secondItem="pMv-Xr-FrO" secondAttribute="leading" id="tCR-c5-Q3Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pMv-Xr-FrO"/>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="YQu-BY-K8d" id="swR-0P-syV"/>
+                        <outlet property="scrollView" destination="gta-mB-cSS" id="g7a-Ea-wgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3J-tR-iea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="137"/>
+            <point key="canvasLocation" x="63.768115942028992" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feedback-background" width="1242" height="2688"/>
+    </resources>
 </document>

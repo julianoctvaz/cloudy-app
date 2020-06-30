@@ -17,6 +17,7 @@
 		BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4B124AA3BD70002E56F /* Timer.storyboard */; };
 		BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */; };
 		BE6DB4D624ABA4A80002E56F /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */; };
+		BE6DB4F824ABDEF60002E56F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */; };
 		BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */; };
 		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
 		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
@@ -60,11 +61,12 @@
 		BE6DB4B124AA3BD70002E56F /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
+		BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDelegateViewController.swift; sourceTree = "<group>"; };
-		BEA262D324995BCE007F147C /* cloudy-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cloudy-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA262D324995BCE007F147C /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA262D624995BCE007F147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA262D824995BCE007F147C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BEA262DA24995BCE007F147C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */,
 				176D95A524ABA7E2005786CD /* Voce-Controllers */,
 				BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */,
+				BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,7 +196,7 @@
 		BEA262D424995BCE007F147C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEA262D324995BCE007F147C /* cloudy-app.app */,
+				BEA262D324995BCE007F147C /* Cloudy.app */,
 				BEA262EC24995BD2007F147C /* cloudy-appTests.xctest */,
 				BEA262F724995BD2007F147C /* cloudy-appUITests.xctest */,
 			);
@@ -246,7 +249,7 @@
 			);
 			name = "cloudy-app";
 			productName = "cloudy-app";
-			productReference = BEA262D324995BCE007F147C /* cloudy-app.app */;
+			productReference = BEA262D324995BCE007F147C /* Cloudy.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BEA262EB24995BD2007F147C /* cloudy-appTests */ = {
@@ -374,6 +377,7 @@
 				BEA262D724995BCE007F147C /* AppDelegate.swift in Sources */,
 				BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */,
 				176D95A024ABA0DB005786CD /* CollectionViewController.swift in Sources */,
+				BE6DB4F824ABDEF60002E56F /* FeedbackViewController.swift in Sources */,
 				BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */,
 				BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */,
 				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
@@ -560,7 +564,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.cloudy-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cloudy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -578,7 +582,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy.cloudy-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Cloudy;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
