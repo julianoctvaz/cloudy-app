@@ -10,7 +10,7 @@
         <!--Collection View Controller-->
         <scene sceneID="pxN-di-A0h">
             <objects>
-                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dZ-PV-p8z" userLabel="Collection View Controller" customClass="CollectionViewController" customModule="criandoColletionView" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dZ-PV-p8z" userLabel="Collection View Controller" customClass="CollectionViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FpK-lH-Lts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -22,7 +22,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="g8d-3I-oGr" customClass="CollectionViewCell" customModule="criandoColletionView" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="g8d-3I-oGr" customClass="CollectionViewCell" customModule="cloudy_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="257" width="136" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qzS-nU-hUK">
@@ -30,21 +30,20 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="shs-Uo-JDb">
-                                            <rect key="frame" x="25" y="110" width="86" height="33"/>
+                                            <rect key="frame" x="0.0" y="110" width="140" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2ya-TS-GKE">
-                                            <rect key="frame" x="-139" y="-380" width="414" height="896"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundo-bagdes" translatesAutoresizingMaskIntoConstraints="NO" id="5rt-mg-dtw">
+                                            <rect key="frame" x="27" y="27" width="83" height="83"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd8-jJ-9RH" userLabel="Button-fundo-bagde">
-                                            <rect key="frame" x="27" y="27" width="83" height="83"/>
-                                            <state key="normal" backgroundImage="fundo-bagdes"/>
+                                            <rect key="frame" x="53" y="53" width="30" height="30"/>
                                             <connections>
                                                 <action selector="tapButton" destination="g8d-3I-oGr" eventType="touchUpInside" id="UWN-Gm-7dn"/>
                                             </connections>
@@ -52,27 +51,26 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="leading" secondItem="qzS-nU-hUK" secondAttribute="leading" constant="27" id="0mH-G5-AUG"/>
-                                        <constraint firstAttribute="trailing" secondItem="Fd8-jJ-9RH" secondAttribute="trailing" constant="26" id="Ehn-Zi-YbW"/>
-                                        <constraint firstItem="shs-Uo-JDb" firstAttribute="top" secondItem="Fd8-jJ-9RH" secondAttribute="bottom" id="WXf-h4-D7S"/>
-                                        <constraint firstItem="shs-Uo-JDb" firstAttribute="top" secondItem="Fd8-jJ-9RH" secondAttribute="bottom" id="Wmp-yw-VZt"/>
-                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="top" secondItem="qzS-nU-hUK" secondAttribute="top" constant="27" id="oet-sc-94V"/>
+                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="centerX" secondItem="qzS-nU-hUK" secondAttribute="centerX" id="VH1-BJ-baQ"/>
+                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="centerY" secondItem="qzS-nU-hUK" secondAttribute="centerY" id="qlg-eF-mdE"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="customSize" width="136" height="136"/>
                                 <connections>
+                                    <outlet property="fundoBagdeImageView" destination="5rt-mg-dtw" id="OyY-Np-Lec"/>
                                     <outlet property="nomeBagdeLabel" destination="shs-Uo-JDb" id="wb0-M2-5Dj"/>
+                                    <outlet property="nuvemButton" destination="Fd8-jJ-9RH" id="CCW-OQ-hf0"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoceHeaderView" id="AnH-KC-Y0j" customClass="CollectionReusableView" customModule="criandoColletionView" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoceHeaderView" id="AnH-KC-Y0j" customClass="CollectionReusableView" customModule="cloudy_app" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ariel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-IP-3se">
-                                    <rect key="frame" x="190" y="205" width="43" height="27"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ariel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-IP-3se">
+                                    <rect key="frame" x="185.5" y="205" width="43" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -91,8 +89,8 @@
                                         <action selector="testaBotao" destination="AnH-KC-Y0j" eventType="touchUpInside" id="PMY-xI-awH"/>
                                     </connections>
                                 </button>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ariel-tela-voce" translatesAutoresizingMaskIntoConstraints="NO" id="wce-Zk-7kl" userLabel="photo">
-                                    <rect key="frame" x="161" y="71" width="91" height="116"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ariel-tela-voce" translatesAutoresizingMaskIntoConstraints="NO" id="wce-Zk-7kl" userLabel="photo">
+                                    <rect key="frame" x="161.5" y="71" width="91" height="115"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="91" id="f5v-w9-7ze"/>
