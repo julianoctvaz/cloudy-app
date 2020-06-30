@@ -12,6 +12,13 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var imageView0: UIImageView!
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var labelDiscretion0: UILabel!
+    @IBOutlet weak var labelDiscretion1: UILabel!
+    @IBOutlet weak var labelDiscretion2: UILabel!
+    
     
     var contentWidth: CGFloat = 0.0
     
@@ -20,35 +27,39 @@ class FeedbackViewController: UIViewController, UIScrollViewDelegate {
 
         scrollView.delegate = self
         
-        for image in 0...2 {
-            let imageToDisplay = UIImage(named: "feedback-image\(image).png")
-            //self.imageView.image = imageToDisplay
-            let imageView = UIImageView(image: imageToDisplay)
-            
-            let xCoordinate = view.frame.midX + view.frame.width * CGFloat(image)
+        let xCoordinate0 = view.frame.midX + view.frame.width * CGFloat(0)
+        let xCoordinate1 = view.frame.midX + view.frame.width * CGFloat(1)
+        let xCoordinate2 = view.frame.midX + view.frame.width * CGFloat(2)
+        
+        self.imageView0.frame = CGRect(x: xCoordinate0 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        self.imageView1.frame = CGRect(x: xCoordinate1 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        self.imageView2.frame = CGRect(x: xCoordinate2 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        
+        self.labelDiscretion0.frame = CGRect(x: xCoordinate0 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+        self.labelDiscretion1.frame = CGRect(x: xCoordinate1 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+        self.labelDiscretion2.frame = CGRect(x: xCoordinate2 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+
+        for _ in 0...2 {
             contentWidth += view.frame.width
-            
-            scrollView.addSubview(imageView)
-            imageView.frame = CGRect(x: xCoordinate - 50, y: (view.frame.height / 2) - 50, width: 100, height: 100)
         }
         
         scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.height)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print(scrollView.contentOffset)
-        pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(414))
+        
+        print(scrollView.contentOffset)
+        
+        if Int(scrollView.contentOffset.x) % 414 == 0 {
+            pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(414))
+        } else if Int(scrollView.contentOffset.x) % 375 == 0 {
+            pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(375))
+        }
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // Link para tutorial:
+    // https://www.youtube.com/watch?v=X2Wr4TtMG6Q
 
 }
