@@ -17,6 +17,9 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var selectTimePicker: UIPickerView!
     
+    // Variáveis picker
+    var minutesPicker = 0
+    var secondsPicker = 0
     
     // Configurando o timer
     var seconds = 5 // Esta variável manterá um valor inicial de segundos. Pode ser qualquer valor acima de 0.
@@ -25,15 +28,20 @@ class TimerViewController: UIViewController {
     var resumeTapped = false
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        if isTimerRunning == false {
+        if isTimerRunning == false && (minutesPicker != 0 || secondsPicker != 0) {
+            // Pega a entrada do picker e passa para seconds
+            self.seconds = self.secondsPicker
+            self.seconds += self.minutesPicker * 60
+            // Muda a label com do timer
+            timerLabel.text = String(format: "%02i:%02i", self.minutesPicker, self.secondsPicker)
             runTimer()
             self.startButton.isEnabled = false
+            self.startButton.isHidden = true
+            self.pauseButton.isHidden = false
+            self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
+            self.timerLabel.isHidden = false
+            self.selectTimePicker.isHidden = true
         }
-        self.startButton.isHidden = true
-        self.pauseButton.isHidden = false
-        self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
-        self.timerLabel.isHidden = false
-        self.selectTimePicker.isHidden = true
     }
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         if self.resumeTapped == false {
@@ -94,7 +102,9 @@ class TimerViewController: UIViewController {
 }
 
 extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
     // Configurando picker:
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -107,5 +117,32 @@ extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return String(format: "%02i", row)
     }
     
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        var label: UILabel
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+        
+        label.textColor = #colorLiteral(red: 0.2746230066, green: 0.2760953009, blue: 0.3237795234, alpha: 1)
+        label.textAlignment = .center
+        label.font = UIFont(name: "AvenirNext-Regular", size: 30)
+        
+        
+        label.text = String(format: "%02i", row)
+        
+        return label
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if component == 0 {
+            minutesPicker = row
+        } else {
+            secondsPicker = row
+        }
+    }
     
 }
