@@ -1,31 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O4b-li-SKu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8dZ-PV-p8z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Você-->
-        <scene sceneID="e61-tf-Fzk">
+        <!--Collection View Controller-->
+        <scene sceneID="pxN-di-A0h">
             <objects>
-                <viewController id="O4b-li-SKu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="atU-2C-ryc">
+                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dZ-PV-p8z" userLabel="Collection View Controller" customClass="CollectionViewController" customModule="criandoColletionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FpK-lH-Lts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="dfe-iq-gzL"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Você" image="person" catalog="system" id="FlI-2O-WYC"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="0.0" id="HK2-1e-GHO">
+                            <size key="itemSize" width="136" height="136"/>
+                            <size key="headerReferenceSize" width="0.0" height="257"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="g8d-3I-oGr" customClass="CollectionViewCell" customModule="criandoColletionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="257" width="136" height="136"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qzS-nU-hUK">
+                                    <rect key="frame" x="0.0" y="0.0" width="136" height="136"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="shs-Uo-JDb">
+                                            <rect key="frame" x="25" y="110" width="86" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2ya-TS-GKE">
+                                            <rect key="frame" x="-139" y="-380" width="414" height="896"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd8-jJ-9RH" userLabel="Button-fundo-bagde">
+                                            <rect key="frame" x="27" y="27" width="83" height="83"/>
+                                            <state key="normal" backgroundImage="fundo-bagdes"/>
+                                            <connections>
+                                                <action selector="tapButton" destination="g8d-3I-oGr" eventType="touchUpInside" id="UWN-Gm-7dn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="leading" secondItem="qzS-nU-hUK" secondAttribute="leading" constant="27" id="0mH-G5-AUG"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fd8-jJ-9RH" secondAttribute="trailing" constant="26" id="Ehn-Zi-YbW"/>
+                                        <constraint firstItem="shs-Uo-JDb" firstAttribute="top" secondItem="Fd8-jJ-9RH" secondAttribute="bottom" id="WXf-h4-D7S"/>
+                                        <constraint firstItem="shs-Uo-JDb" firstAttribute="top" secondItem="Fd8-jJ-9RH" secondAttribute="bottom" id="Wmp-yw-VZt"/>
+                                        <constraint firstItem="Fd8-jJ-9RH" firstAttribute="top" secondItem="qzS-nU-hUK" secondAttribute="top" constant="27" id="oet-sc-94V"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="customSize" width="136" height="136"/>
+                                <connections>
+                                    <outlet property="nomeBagdeLabel" destination="shs-Uo-JDb" id="wb0-M2-5Dj"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoceHeaderView" id="AnH-KC-Y0j" customClass="CollectionReusableView" customModule="criandoColletionView" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ariel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-IP-3se">
+                                    <rect key="frame" x="190" y="205" width="43" height="27"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fundo-foto-perfil-tela-voce" translatesAutoresizingMaskIntoConstraints="NO" id="15x-hd-yeQ" userLabel="fundo-circulo">
+                                    <rect key="frame" x="147" y="71" width="120" height="115"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="sWa-jH-6Ya"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgt-pW-He9">
+                                    <rect key="frame" x="349" y="40" width="32" height="32"/>
+                                    <state key="normal" backgroundImage="settings-icon-tela-voce"/>
+                                    <connections>
+                                        <action selector="testaBotao" destination="AnH-KC-Y0j" eventType="touchUpInside" id="PMY-xI-awH"/>
+                                    </connections>
+                                </button>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ariel-tela-voce" translatesAutoresizingMaskIntoConstraints="NO" id="wce-Zk-7kl" userLabel="photo">
+                                    <rect key="frame" x="161" y="71" width="91" height="116"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="91" id="f5v-w9-7ze"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="centerY" secondItem="AnH-KC-Y0j" secondAttribute="centerY" id="9wE-TM-1YU"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="centerX" secondItem="wce-Zk-7kl" secondAttribute="centerX" id="ABa-sf-reE"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="top" secondItem="AnH-KC-Y0j" secondAttribute="topMargin" constant="63" id="F90-Jk-29b"/>
+                                <constraint firstItem="kgt-pW-He9" firstAttribute="top" secondItem="AnH-KC-Y0j" secondAttribute="topMargin" constant="32" id="Gkw-cf-89e"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="top" secondItem="wce-Zk-7kl" secondAttribute="top" id="QKm-6R-TJQ"/>
+                                <constraint firstItem="ldg-IP-3se" firstAttribute="top" secondItem="15x-hd-yeQ" secondAttribute="bottom" constant="19" id="a04-Kd-3lq"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="centerY" secondItem="wce-Zk-7kl" secondAttribute="centerY" id="jzS-GC-cI1"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="centerX" secondItem="ldg-IP-3se" secondAttribute="centerX" id="mhh-pD-XxQ"/>
+                                <constraint firstItem="15x-hd-yeQ" firstAttribute="centerX" secondItem="AnH-KC-Y0j" secondAttribute="centerX" id="tYN-FV-YIr"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="kgt-pW-He9" secondAttribute="trailing" constant="25" id="wQE-iX-pNl"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="settingsButton" destination="kgt-pW-He9" id="Pdv-qO-rPT"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="8dZ-PV-p8z" id="iXX-Mi-u43"/>
+                            <outlet property="delegate" destination="8dZ-PV-p8z" id="Aot-n9-sdF"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Você" image="person" catalog="system" id="98u-eX-rDW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bWL-BK-Q7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQN-aG-hZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="72"/>
+            <point key="canvasLocation" x="-143.47826086956522" y="-359.59821428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Ariel-tela-voce" width="91" height="116"/>
+        <image name="fundo-bagdes" width="83" height="83"/>
+        <image name="fundo-foto-perfil-tela-voce" width="120" height="120"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="settings-icon-tela-voce" width="32" height="32"/>
     </resources>
 </document>
