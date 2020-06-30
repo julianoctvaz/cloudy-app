@@ -40,7 +40,7 @@
 		</dict>
 	</dict>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Onboarding</string>
 	<key>UIMainStoryboardFile</key>
 	<string>TabBar</string>
 	<key>UIRequiredDeviceCapabilities</key>
