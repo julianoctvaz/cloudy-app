@@ -85,6 +85,9 @@
                                     <constraint firstAttribute="height" constant="45" id="dLw-2u-kDR"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="concluir-button-timer"/>
+                                <connections>
+                                    <segue destination="j0l-LT-K4b" kind="show" id="3jz-p5-7l8"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-eE-J0G">
                                 <rect key="frame" x="167" y="418" width="79" height="61"/>
@@ -139,6 +142,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zU-JB-7dB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="105.79710144927537" y="112.5"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="x2n-Hl-diq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feedback" id="j0l-LT-K4b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0LY-xR-yr4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agM-mi-HVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="113"/>
         </scene>
     </scenes>
     <resources>
