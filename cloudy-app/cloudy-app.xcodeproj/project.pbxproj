@@ -52,14 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		176D959F24ABA0DB005786CD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		176D95A124ABA1BA005786CD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		176D95A324ABA22C005786CD /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
-=======
 		7D96C13D24AB704A006FB6AF /* PausasDataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausasDataCollectionViewCell.swift; sourceTree = "<group>"; };
 		7D96C13F24AB829B006FB6AF /* PausasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausasViewController.swift; sourceTree = "<group>"; };
->>>>>>> pausas
 		BE6DB4A924AA32010002E56F /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		BE6DB4AB24AA32720002E56F /* PausasTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PausasTabBar.storyboard; sourceTree = "<group>"; };
 		BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeuCeuTabBar.storyboard; sourceTree = "<group>"; };
@@ -158,13 +155,10 @@
 				BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */,
 				BE8DB40124A6132100ADB966 /* DataViewController.swift */,
 				BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */,
-<<<<<<< HEAD
 				176D95A524ABA7E2005786CD /* Voce-Controllers */,
 				BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */,
-=======
 				7D96C13D24AB704A006FB6AF /* PausasDataCollectionViewCell.swift */,
 				7D96C13F24AB829B006FB6AF /* PausasViewController.swift */,
->>>>>>> pausas
 			);
 			path = Controller;
 			sourceTree = "<group>";
