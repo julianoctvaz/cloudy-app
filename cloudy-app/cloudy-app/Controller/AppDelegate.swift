@@ -27,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Muda as cores dos itens da tab bar
         UITabBar.appearance().tintColor = #colorLiteral(red: 0.4358717203, green: 0.5370141268, blue: 0.8963852525, alpha: 1)
+        
+        // Muda a fonte dos itens da tab bar
+        let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 12.0)!]
+        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes, for: .normal)
+                    
         return true
     }
 
