@@ -44,9 +44,9 @@ extension PausasViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PausasDataCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PausasDataCollectionViewCell
         
-        var image = UIImage(named: backgroundArray[indexPath.row])
+        let image = UIImage(named: backgroundArray[indexPath.row])
 
         //cell?.cardButton.setImage(UIImage(named: backgroundArray[indexPath.row]), for: .normal)
         
