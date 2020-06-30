@@ -12,6 +12,8 @@
 		BE6DB4AE24AA32840002E56F /* SeuCeuTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */; };
 		BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */; };
 		BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4B124AA3BD70002E56F /* Timer.storyboard */; };
+		BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */; };
+		BE6DB4D624ABA4A80002E56F /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */; };
 		BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */; };
 		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
 		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
@@ -50,6 +52,8 @@
 		BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeuCeuTabBar.storyboard; sourceTree = "<group>"; };
 		BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoceTabBar.storyboard; sourceTree = "<group>"; };
 		BE6DB4B124AA3BD70002E56F /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
+		BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */,
 				BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */,
 				BE6DB4B124AA3BD70002E56F /* Timer.storyboard */,
+				BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */,
 				BE8DB40124A6132100ADB966 /* DataViewController.swift */,
 				BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */,
+				BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 				BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */,
 				BEA262E324995BD2007F147C /* Assets.xcassets in Resources */,
 				BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */,
+				BE6DB4D624ABA4A80002E56F /* Feedback.storyboard in Resources */,
 				BEA262DE24995BCE007F147C /* Main.storyboard in Resources */,
 				BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */,
 			);
@@ -347,6 +354,7 @@
 				BE8DB40424A625CC00ADB966 /* OnboardingDelegateViewController.swift in Sources */,
 				BEA262D724995BCE007F147C /* AppDelegate.swift in Sources */,
 				BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */,
+				BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */,
 				BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */,
 				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
 				BEA262E124995BCE007F147C /* cloudy_app.xcdatamodeld in Sources */,

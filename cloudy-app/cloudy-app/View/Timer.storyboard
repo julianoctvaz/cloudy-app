@@ -1,7 +1,164 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dba-vA-9W2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Timer View Controller-->
+        <scene sceneID="ce8-ev-Kxx">
+            <objects>
+                <viewController id="dba-vA-9W2" customClass="TimerViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFZ-M0-kCu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-background" translatesAutoresizingMaskIntoConstraints="NO" id="Xnb-Lb-9tl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yoga" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NeZ-ra-OLz">
+                                <rect key="frame" x="72" y="124" width="277" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="JTp-xY-YUl"/>
+                                    <constraint firstAttribute="height" constant="41" id="mgc-fK-4Xe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você gostaria de fazer uma pausa de quanto tempo?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Br-dq-Y0G">
+                                <rect key="frame" x="59.5" y="198" width="295" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="lF8-pw-5gG"/>
+                                    <constraint firstAttribute="width" constant="295" id="sOE-aP-y4B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQI-gf-qr5" userLabel="Button Fazer Uma Pausa">
+                                <rect key="frame" x="92" y="525" width="230" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="i3h-FR-Vud"/>
+                                    <constraint firstAttribute="width" constant="230" id="zqO-L5-oOg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="start-timer-button"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="dba-vA-9W2" eventType="touchUpInside" id="d36-VZ-D2i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFP-yE-PCa" userLabel="Button Fechar Modal">
+                                <rect key="frame" x="366" y="58" width="34" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="6rn-j7-kD6"/>
+                                    <constraint firstAttribute="width" constant="34" id="FW9-Vd-dGF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="x-timer"/>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-85-ZPa" userLabel="Label Timer">
+                                <rect key="frame" x="157" y="427.5" width="100" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lqb-EQ-sin"/>
+                                    <constraint firstAttribute="height" constant="41" id="nGW-jA-R9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.35322618480000001" green="0.3619004488" blue="0.3977993131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trB-tP-pHl" userLabel="Button Pause">
+                                <rect key="frame" x="133.5" y="525" width="147" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="A8x-h1-P00"/>
+                                    <constraint firstAttribute="width" constant="147" id="s2t-iz-7yz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="pausa-button-timer"/>
+                                <connections>
+                                    <action selector="pauseButtonTapped:" destination="dba-vA-9W2" eventType="touchUpInside" id="cwj-cd-azR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6w-Q1-eTx" userLabel="Button Conclude">
+                                <rect key="frame" x="133.5" y="525" width="147" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="Z9l-go-Slm"/>
+                                    <constraint firstAttribute="height" constant="45" id="dLw-2u-kDR"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="concluir-button-timer"/>
+                                <connections>
+                                    <segue destination="j0l-LT-K4b" kind="show" id="3jz-p5-7l8"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-eE-J0G">
+                                <rect key="frame" x="167" y="418" width="79" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="YDU-4u-Uoe"/>
+                                    <constraint firstAttribute="width" constant="79" id="fQt-IO-G5k"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBs-MC-xxn">
+                                <rect key="frame" x="202.5" y="427" width="9" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.35322618480000001" green="0.3619004488" blue="0.3977993131" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AmE-eE-J0G" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="17V-LF-Wu1"/>
+                            <constraint firstItem="DlZ-85-ZPa" firstAttribute="centerY" secondItem="NFZ-M0-kCu" secondAttribute="centerY" id="2lz-xf-Ck2"/>
+                            <constraint firstItem="NeZ-ra-OLz" firstAttribute="top" secondItem="gxt-8d-Mpy" secondAttribute="top" constant="80" id="6TK-80-3o3"/>
+                            <constraint firstItem="gxt-8d-Mpy" firstAttribute="bottom" secondItem="trB-tP-pHl" secondAttribute="bottom" constant="292" id="8zC-Xx-0xg"/>
+                            <constraint firstItem="7Br-dq-Y0G" firstAttribute="top" secondItem="NeZ-ra-OLz" secondAttribute="bottom" constant="33" id="CnK-R8-hSV"/>
+                            <constraint firstItem="gxt-8d-Mpy" firstAttribute="trailing" secondItem="fFP-yE-PCa" secondAttribute="trailing" constant="14" id="IsJ-dc-uZo"/>
+                            <constraint firstItem="NeZ-ra-OLz" firstAttribute="leading" secondItem="gxt-8d-Mpy" secondAttribute="leading" constant="72" id="L5e-VN-C7g"/>
+                            <constraint firstItem="Xnb-Lb-9tl" firstAttribute="leading" secondItem="gxt-8d-Mpy" secondAttribute="leading" id="Nf2-fM-mIF"/>
+                            <constraint firstItem="AmE-eE-J0G" firstAttribute="top" secondItem="7Br-dq-Y0G" secondAttribute="bottom" constant="153" id="SO2-HN-FG1"/>
+                            <constraint firstItem="fFP-yE-PCa" firstAttribute="top" secondItem="gxt-8d-Mpy" secondAttribute="top" constant="14" id="Zh8-uc-heC"/>
+                            <constraint firstItem="trB-tP-pHl" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="ahX-pt-6EF"/>
+                            <constraint firstItem="DlZ-85-ZPa" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="at3-5z-OF7"/>
+                            <constraint firstItem="NQI-gf-qr5" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="dxH-3M-OdS"/>
+                            <constraint firstItem="gxt-8d-Mpy" firstAttribute="bottom" secondItem="NQI-gf-qr5" secondAttribute="bottom" constant="292" id="fd2-K9-MQa"/>
+                            <constraint firstItem="VBs-MC-xxn" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="fik-6W-AIQ"/>
+                            <constraint firstAttribute="bottom" secondItem="Xnb-Lb-9tl" secondAttribute="bottom" id="h3W-8g-R7m"/>
+                            <constraint firstItem="gxt-8d-Mpy" firstAttribute="trailing" secondItem="Xnb-Lb-9tl" secondAttribute="trailing" id="hnw-1p-xuu"/>
+                            <constraint firstItem="e6w-Q1-eTx" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="leQ-vM-jT0"/>
+                            <constraint firstItem="VBs-MC-xxn" firstAttribute="top" secondItem="7Br-dq-Y0G" secondAttribute="bottom" constant="162" id="nkx-ih-7fh"/>
+                            <constraint firstItem="gxt-8d-Mpy" firstAttribute="bottom" secondItem="e6w-Q1-eTx" secondAttribute="bottom" constant="292" id="qp4-7j-aRy"/>
+                            <constraint firstItem="7Br-dq-Y0G" firstAttribute="centerX" secondItem="NFZ-M0-kCu" secondAttribute="centerX" id="rFV-UG-fho"/>
+                            <constraint firstItem="Xnb-Lb-9tl" firstAttribute="top" secondItem="NFZ-M0-kCu" secondAttribute="top" id="toT-yP-0ec"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gxt-8d-Mpy"/>
+                    </view>
+                    <connections>
+                        <outlet property="concludeButton" destination="e6w-Q1-eTx" id="Unt-dl-97N"/>
+                        <outlet property="pauseButton" destination="trB-tP-pHl" id="iJN-tF-RnL"/>
+                        <outlet property="phraseLabel" destination="7Br-dq-Y0G" id="dhk-ny-usJ"/>
+                        <outlet property="selectTimePicker" destination="AmE-eE-J0G" id="ESA-cs-Sbv"/>
+                        <outlet property="startButton" destination="NQI-gf-qr5" id="3h7-h9-H3y"/>
+                        <outlet property="timerLabel" destination="DlZ-85-ZPa" id="huu-jV-lCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0zU-JB-7dB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="112.5"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="x2n-Hl-diq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feedback" id="j0l-LT-K4b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0LY-xR-yr4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agM-mi-HVA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="concluir-button-timer" width="441" height="135"/>
+        <image name="pausa-button-timer" width="441" height="135"/>
+        <image name="start-timer-button" width="690" height="135"/>
+        <image name="timer-background" width="1242" height="2688"/>
+        <image name="x-timer" width="102" height="102"/>
+    </resources>
 </document>
