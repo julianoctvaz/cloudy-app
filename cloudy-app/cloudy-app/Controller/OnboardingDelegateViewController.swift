@@ -132,7 +132,7 @@ class OnboardingDelegateViewController: UIViewController {
         // Add the content to the notification content
         notificationContent.title = "Teste de notificaçao"
         notificationContent.body = "Estamos de olho em você!!!"
-        notificationContent.badge = NSNumber(value: 3)
+        notificationContent.badge = NSNumber(value: 1)
         
         // Add an attachment to the notification content
         if let url = Bundle.main.url(forResource: "dune",
