@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Collection View Controller-->
         <scene sceneID="pxN-di-A0h">
             <objects>
-                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dZ-PV-p8z" userLabel="Collection View Controller" customClass="CollectionViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dZ-PV-p8z" userLabel="Collection View Controller" customClass="CollectionViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="FpK-lH-Lts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -22,7 +23,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="g8d-3I-oGr" customClass="CollectionViewCell" customModule="cloudy_app" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="g8d-3I-oGr" customClass="CollectionViewCell" customModule="Cloudy" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="257" width="136" height="136"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qzS-nU-hUK">
@@ -64,7 +65,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoceHeaderView" id="AnH-KC-Y0j" customClass="CollectionReusableView" customModule="cloudy_app" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="VoceHeaderView" id="AnH-KC-Y0j" customClass="CollectionReusableView" customModule="Cloudy" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -86,7 +87,7 @@
                                     <rect key="frame" x="349" y="40" width="32" height="32"/>
                                     <state key="normal" backgroundImage="settings-icon-tela-voce"/>
                                     <connections>
-                                        <action selector="testaBotao" destination="AnH-KC-Y0j" eventType="touchUpInside" id="PMY-xI-awH"/>
+                                        <segue destination="xF8-F1-ozl" kind="show" id="UkG-8a-Z05"/>
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ariel-tela-voce" translatesAutoresizingMaskIntoConstraints="NO" id="wce-Zk-7kl" userLabel="photo">
@@ -126,12 +127,53 @@
             </objects>
             <point key="canvasLocation" x="-143.47826086956522" y="-359.59821428571428"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="dpL-yC-W7X">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="xF8-F1-ozl" customClass="SettingsViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pfG-S0-ngD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundoSettings" translatesAutoresizingMaskIntoConstraints="NO" id="t6u-Yy-N1V">
+                                <rect key="frame" x="0.0" y="18" width="414" height="934"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1Z-VY-AP2" userLabel="Button voltar">
+                                <rect key="frame" x="25" y="84" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="setaVoltar"/>
+                                <connections>
+                                    <action selector="voltaParaTelaSettings:" destination="xF8-F1-ozl" eventType="touchUpInside" id="66m-O5-Yjp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="prototype screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-G4-Bxx">
+                                <rect key="frame" x="88" y="645" width="246" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="UKA-YA-hOG"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBQ-el-YMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659.4202898550725" y="-361.60714285714283"/>
+        </scene>
     </scenes>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
     <resources>
         <image name="Ariel-tela-voce" width="91" height="116"/>
         <image name="fundo-bagdes" width="83" height="83"/>
         <image name="fundo-foto-perfil-tela-voce" width="120" height="120"/>
+        <image name="fundoSettings" width="414" height="896"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="setaVoltar" width="37" height="37"/>
         <image name="settings-icon-tela-voce" width="32" height="32"/>
     </resources>
 </document>
