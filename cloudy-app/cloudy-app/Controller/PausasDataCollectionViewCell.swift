@@ -18,4 +18,6 @@ class PausasDataCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardLabel: UILabel!
     
+    
+    
 }
