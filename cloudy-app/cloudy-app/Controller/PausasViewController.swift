@@ -32,34 +32,30 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     func addPausa(){
         let nomeAtividade = nomeAtividadeTextfield.text!
         let nomeBg = "Atividade\(contadorBg)"
-        
-        
-        
-        print(nomeAtividade)
-        print("tamanho array nomes")
-        print(labelArray.count)
-        print("tamanho array bg")
-        print(backgroundArray.count)
-        
         let indexPath = IndexPath(row: labelArray.count, section: 0)
+        
+        //Adiciona texto do textfield ao array que guarda informação das labels
         labelArray.append(nomeAtividade)
+        
+        
+        //Define qual a imagem será exibida no background do card, para que não use a primeira e mantenha a ordem
         if(contadorBg < 3){
             contadorBg += 1
         }else{
             contadorBg = 1
         }
+        
+        //Insere no array de referências do nome da imagem
         backgroundArray.append(nomeBg)
-        
-        print("tamanho array nomes")
-        print(labelArray.count)
-        collectionView.insertItems(at: [indexPath])
-        //collectionView?.reloadData()
-        
-        print("adicionei na cv")
        
+        //Insere item na collection view
+        collectionView.insertItems(at: [indexPath])
+        
+        //Limpar o textfield para a próxima vez que tocar no botão
+        nomeAtividadeTextfield.text = nil
+     
     }
 
-    
     //Backgrounds e labels dos itens da Collection View
     var backgroundArray = ["AdicionarPausa",
                            "Atividade1",
@@ -77,7 +73,7 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         // Do any additional setup after loading the view.
     }
     
-    // Configurar botão Adicionar Pausa
+    //Configurar botão Adicionar Pausa
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if let botao = sender as? PausasDataCollectionViewCell {
             if botao.cardLabel.text == "Adicionar pausa" {
@@ -92,6 +88,7 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
 
         return true
     }
+    
     //Configurar conexão deste storyboard com o storyboard do Timer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "namePausa" {
@@ -103,12 +100,14 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    // MARK: Functions
+    //Funções do texfield
     private func configureTextFields(){
         // Handle the text field’s user input through delegate callbacks.
         nomeAtividadeTextfield.delegate = self
         
     }
+    
+
     
     // MARK: Dismiss keyboard
     private func configureTapGesture(){
@@ -125,7 +124,6 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     
 }
     
-
 extension PausasViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return backgroundArray.count
@@ -133,19 +131,9 @@ extension PausasViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PausasDataCollectionViewCell
-        let image: UIImage
-        let indice: Int
-        
-        if(indexPath.row == 0){
-            image = UIImage(named: backgroundArray[0])!
-        }
-        else{
-            
-            indice = (indexPath.row % backgroundArray.count)
-            image = UIImage(named: backgroundArray[indexPath.row])!
-            
-            //image = UIImage(named: backgroundArray[0])!
-        }
+        let image:UIImage
+        //Define imagem e nome dos cards da collection view
+        image = UIImage(named: backgroundArray[indexPath.row])!
         cell?.cardButton.setBackgroundImage(image, for: .normal)
         cell?.cardLabel.text = labelArray[indexPath.row]
 
