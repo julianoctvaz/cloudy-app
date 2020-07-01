@@ -15,6 +15,12 @@ class PausasViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPauseLabel: UILabel!
     
+    @IBOutlet weak var viewPopup: UIView!
+    @IBOutlet weak var botaoFechar: UIButton!
+    @IBOutlet weak var nomeAtividadeTextfield: UITextField!
+    @IBOutlet weak var botaoSalvar: UIButton!
+    
+    
     @IBAction func addPauseButton(_ sender: Any) {
         print("apertou botão de adicionar pausa")
         

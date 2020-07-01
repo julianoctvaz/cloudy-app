@@ -112,9 +112,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="background-popup" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-jZ-TGT">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="232"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-6G-SKC">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-6G-SKC">
                                         <rect key="frame" x="270" y="8" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="buttonfechar"/>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-Xc-Yv9">
@@ -150,11 +149,13 @@
                                     <constraint firstAttribute="trailing" secondItem="q7E-jZ-TGT" secondAttribute="trailing" id="8uP-wF-J9e"/>
                                     <constraint firstItem="db6-15-LTO" firstAttribute="centerX" secondItem="Xzb-Xc-Yv9" secondAttribute="centerX" id="L05-PL-gb6"/>
                                     <constraint firstItem="AQk-fI-6Ly" firstAttribute="top" secondItem="Xzb-Xc-Yv9" secondAttribute="bottom" constant="15" id="LL5-4e-upz"/>
+                                    <constraint firstAttribute="trailing" secondItem="v7Z-6G-SKC" secondAttribute="trailing" constant="8" id="Qro-kq-O9j"/>
                                     <constraint firstAttribute="bottom" secondItem="AQk-fI-6Ly" secondAttribute="bottom" constant="25" id="Rdb-47-0ud"/>
                                     <constraint firstItem="q7E-jZ-TGT" firstAttribute="leading" secondItem="ZpG-UD-nLs" secondAttribute="leading" id="bRz-QV-7jd"/>
                                     <constraint firstItem="db6-15-LTO" firstAttribute="top" secondItem="ZpG-UD-nLs" secondAttribute="top" constant="30" id="cyn-J8-rnW"/>
                                     <constraint firstItem="AQk-fI-6Ly" firstAttribute="centerX" secondItem="ZpG-UD-nLs" secondAttribute="centerX" id="gka-lf-WId"/>
                                     <constraint firstItem="q7E-jZ-TGT" firstAttribute="top" secondItem="ZpG-UD-nLs" secondAttribute="top" id="hOX-HP-5Af"/>
+                                    <constraint firstItem="v7Z-6G-SKC" firstAttribute="top" secondItem="ZpG-UD-nLs" secondAttribute="top" constant="8" id="oQs-SX-h9Y"/>
                                     <constraint firstItem="db6-15-LTO" firstAttribute="leading" secondItem="ZpG-UD-nLs" secondAttribute="leading" constant="39" id="qkb-Rq-iud"/>
                                     <constraint firstItem="Xzb-Xc-Yv9" firstAttribute="top" secondItem="db6-15-LTO" secondAttribute="bottom" constant="15" id="zAD-lT-NzO"/>
                                 </constraints>
@@ -183,9 +184,13 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addPauseLabel" destination="Yio-ht-14K" id="5Eg-vb-yan"/>
+                        <outlet property="botaoFechar" destination="v7Z-6G-SKC" id="Aq6-hN-xAT"/>
+                        <outlet property="botaoSalvar" destination="AQk-fI-6Ly" id="kgF-2p-dGb"/>
                         <outlet property="collectionView" destination="9kO-gq-wZA" id="FLW-x0-i8A"/>
+                        <outlet property="nomeAtividadeTextfield" destination="Xzb-Xc-Yv9" id="EFh-b2-kAQ"/>
                         <outlet property="subtitleLabel" destination="NKJ-fJ-84B" id="IBY-dl-pdA"/>
                         <outlet property="titleLabel" destination="clR-YQ-inW" id="Jfg-g7-9Ha"/>
+                        <outlet property="viewPopup" destination="ZpG-UD-nLs" id="prs-9u-1iT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-s5-FiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
