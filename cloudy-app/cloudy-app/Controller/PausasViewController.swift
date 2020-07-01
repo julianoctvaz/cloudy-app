@@ -15,8 +15,19 @@ class PausasViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var addPauseLabel: UILabel!
     
+    @IBOutlet weak var viewPopup: UIView!
+    @IBOutlet weak var botaoFechar: UIButton!
+    @IBOutlet weak var nomeAtividadeTextfield: UITextField!
+    @IBOutlet weak var botaoSalvar: UIButton!
+    
+    
     @IBAction func addPauseButton(_ sender: Any) {
-           print("apertou botão de adicionar pausa")
+        print("apertou botão de adicionar pausa")
+        
+        let name = "John"
+        labelArray.append(name)
+        let indexPath = IndexPath(row: labelArray.count - 1, section: 0)
+        collectionView.insertItems(at: [indexPath])
        }
     
     //Backgrounds e labels dos itens da Collection View
