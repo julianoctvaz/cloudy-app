@@ -92,7 +92,7 @@ class CollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Selected Country: \(dataSource[indexPath.row])")
+        print("Selected Cell: \(dataSource[indexPath.row])")
     }
     
 
