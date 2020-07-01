@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1329" y="185"/>
         </scene>
-        <!--Main-->
+        <!--TabBar-->
         <scene sceneID="kFU-EH-bJZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Z17-IN-kSn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="TabBar" id="Z17-IN-kSn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Ny4-Ot-jdX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ugi-BY-ePS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
