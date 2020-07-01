@@ -7,29 +7,104 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Feedback View Controller-->
         <scene sceneID="liX-Lk-Eao">
             <objects>
-                <viewController id="YGL-eD-0nc" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="YGL-eD-0nc" customClass="FeedbackViewController" customModule="Cloudy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxQ-WP-YB4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tela de feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-FV-5hw">
-                                <rect key="frame" x="142" y="438" width="131" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedback-background" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-ze-7uX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YQu-BY-K8d">
+                                <rect key="frame" x="187" y="534" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UvD-n2-0yS"/>
+                                    <constraint firstAttribute="width" constant="40" id="gIZ-wp-4UN"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" red="0.9999160171" green="1" blue="0.99987190960000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.43587172029999999" green="0.53701412680000005" blue="0.89638525250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1L7-K4-TFx">
+                                <rect key="frame" x="87" y="338" width="240" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="166" id="FAu-Hj-MGo"/>
+                                    <constraint firstAttribute="width" constant="240" id="Ubz-MQ-15X"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gta-mB-cSS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedback-image0" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-S1-7ZD">
+                                        <rect key="frame" x="110" y="404" width="188" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedback-image1" translatesAutoresizingMaskIntoConstraints="NO" id="x3Q-ae-bF5">
+                                        <rect key="frame" x="110" y="403" width="188" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="feedback-image2" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-lH-ub5">
+                                        <rect key="frame" x="111" y="402" width="189" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Energizado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbX-EW-ABS">
+                                        <rect key="frame" x="151" y="529" width="111" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.2746230066" green="0.27609530090000001" blue="0.32377952339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Okay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7r-P3-IJT">
+                                        <rect key="frame" x="151" y="529" width="111" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.2746230066" green="0.27609530090000001" blue="0.32377952339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cansado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT3-0A-aAH">
+                                        <rect key="frame" x="151" y="529" width="111" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="0.2746230066" green="0.27609530090000001" blue="0.32377952339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.88684356210000004" green="0.90431445840000002" blue="0.98010903599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YQu-BY-K8d" firstAttribute="centerX" secondItem="wxQ-WP-YB4" secondAttribute="centerX" id="6DF-Vc-GOJ"/>
+                            <constraint firstItem="1L7-K4-TFx" firstAttribute="centerX" secondItem="wxQ-WP-YB4" secondAttribute="centerX" id="c4F-SC-LPc"/>
+                            <constraint firstItem="YQu-BY-K8d" firstAttribute="top" secondItem="1L7-K4-TFx" secondAttribute="bottom" constant="30" id="dyD-VX-kUH"/>
+                            <constraint firstItem="1L7-K4-TFx" firstAttribute="centerY" secondItem="wxQ-WP-YB4" secondAttribute="centerY" id="rif-wI-CWs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pMv-Xr-FrO"/>
                     </view>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView0" destination="oZo-S1-7ZD" id="zP1-4b-G8k"/>
+                        <outlet property="imageView1" destination="x3Q-ae-bF5" id="Dqm-u3-z00"/>
+                        <outlet property="imageView2" destination="Hcu-lH-ub5" id="jiu-x7-Ueh"/>
+                        <outlet property="labelDiscretion0" destination="GbX-EW-ABS" id="dhk-1u-Kv1"/>
+                        <outlet property="labelDiscretion1" destination="S7r-P3-IJT" id="Uji-B7-2E6"/>
+                        <outlet property="labelDiscretion2" destination="fT3-0A-aAH" id="Jen-Wc-Dit"/>
+                        <outlet property="pageControl" destination="YQu-BY-K8d" id="swR-0P-syV"/>
+                        <outlet property="scrollView" destination="gta-mB-cSS" id="g7a-Ea-wgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3J-tR-iea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="64" y="137"/>
+            <point key="canvasLocation" x="63.768115942028992" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feedback-background" width="1242" height="2688"/>
+        <image name="feedback-image0" width="589" height="297"/>
+        <image name="feedback-image1" width="589" height="297"/>
+        <image name="feedback-image2" width="589" height="297"/>
+    </resources>
 </document>
