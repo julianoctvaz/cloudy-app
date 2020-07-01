@@ -21,12 +21,22 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func botaoFechar(_ sender: Any) {
         viewPopup.isHidden = true
+        
+        //Esconder o teclado
+        hideKeyboard()
+        
+        //Limpar o textfield para a próxima vez que tocar no botão
+        nomeAtividadeTextfield.text = nil
     }
     
     @IBAction func botaoSalvar(_ sender: Any) {
         viewPopup.isHidden = true
+        
+        //Adicionar pausa
         addPausa()
-       
+        
+        //Esconder o teclado
+        hideKeyboard()
     }
     
     func addPausa(){
@@ -70,7 +80,6 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         viewPopup.isHidden = true
-        // Do any additional setup after loading the view.
     }
     
     //Configurar botão Adicionar Pausa
@@ -107,18 +116,16 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         
     }
     
-
-    
     // MARK: Dismiss keyboard
-    private func configureTapGesture(){
-        //Dismiss the keyboard if the user taps outside of the text field
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PausasViewController.handleTap))
-        view.addGestureRecognizer(tapGesture)
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        print("return is pressed")
+        // Hide the keyboard
+        hideKeyboard()
+        return true
     }
     
-    @objc func handleTap(){
-        print("Handle tap was called")
-        view.endEditing(true)
+    func hideKeyboard(){
+        nomeAtividadeTextfield.resignFirstResponder()
     }
     
     
