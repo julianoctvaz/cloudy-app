@@ -28,8 +28,8 @@
                                 <color key="textColor" red="0.35408318039999997" green="0.36256957049999999" blue="0.39541509749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-gq-wZA">
-                                <rect key="frame" x="0.0" y="207" width="414" height="185"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9kO-gq-wZA">
+                                <rect key="frame" x="0.0" y="206.5" width="414" height="606.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TfT-qM-hvg">
                                     <size key="itemSize" width="368" height="171"/>
@@ -80,57 +80,36 @@
                                     <outlet property="delegate" destination="XIn-AN-LjD" id="C8W-KX-gjr"/>
                                 </connections>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhX-XN-VJ2">
-                                <rect key="frame" x="40" y="659" width="334" height="144"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hts-aj-gJ0">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="144"/>
-                                        <state key="normal" title="Add Pause Button" image="AdicionarPausa"/>
-                                        <connections>
-                                            <action selector="addPauseButton:" destination="XIn-AN-LjD" eventType="touchUpInside" id="mru-d5-3K6"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar pausa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-ht-14K">
-                                        <rect key="frame" x="25" y="96.5" width="148.5" height="27.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                        <color key="textColor" red="0.27281945940000002" green="0.27725175019999998" blue="0.32035416360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="Hts-aj-gJ0" firstAttribute="top" secondItem="KhX-XN-VJ2" secondAttribute="top" id="7Sv-gb-XeQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hts-aj-gJ0" secondAttribute="bottom" id="RGB-g2-6WN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Yio-ht-14K" secondAttribute="bottom" constant="20" id="Rve-Rc-P4H"/>
-                                    <constraint firstItem="Hts-aj-gJ0" firstAttribute="leading" secondItem="KhX-XN-VJ2" secondAttribute="leading" id="iW2-93-evM"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hts-aj-gJ0" secondAttribute="trailing" id="uMh-bG-lvO"/>
-                                    <constraint firstItem="Yio-ht-14K" firstAttribute="leading" secondItem="KhX-XN-VJ2" secondAttribute="leading" constant="25" id="xWy-w1-CDe"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpG-UD-nLs">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpG-UD-nLs">
                                 <rect key="frame" x="50.5" y="332" width="313" height="232"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="background-popup" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-jZ-TGT">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="232"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-6G-SKC">
-                                        <rect key="frame" x="270" y="8" width="34" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Z-6G-SKC">
+                                        <rect key="frame" x="271" y="8" width="34" height="34"/>
                                         <state key="normal" image="buttonfechar"/>
+                                        <connections>
+                                            <action selector="botaoFechar:" destination="XIn-AN-LjD" eventType="touchUpInside" id="ilp-4b-Qdy"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-Xc-Yv9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-Xc-Yv9">
                                         <rect key="frame" x="66.5" y="107" width="180" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="180" id="6FM-Vk-KDb"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="VOH-I0-buI"/>
                                             <constraint firstAttribute="height" constant="40" id="mdY-je-Ufg"/>
                                         </constraints>
-                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="0.27281945940000002" green="0.27725175019999998" blue="0.32035416360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQk-fI-6Ly">
                                         <rect key="frame" x="96" y="162" width="121" height="45"/>
                                         <state key="normal" image="button-salvar"/>
+                                        <connections>
+                                            <action selector="botaoSalvar:" destination="XIn-AN-LjD" eventType="touchUpInside" id="m4l-1U-JNw"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que você gostaria de fazer nesta pausa?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db6-15-LTO">
                                         <rect key="frame" x="39" y="30" width="235" height="62"/>
@@ -143,7 +122,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Xzb-Xc-Yv9" firstAttribute="centerX" secondItem="ZpG-UD-nLs" secondAttribute="centerX" id="2fF-7b-lhc"/>
                                     <constraint firstAttribute="bottom" secondItem="q7E-jZ-TGT" secondAttribute="bottom" id="8Ul-d2-zto"/>
@@ -168,11 +147,9 @@
                             <constraint firstItem="ZpG-UD-nLs" firstAttribute="centerY" secondItem="Fqe-sq-iMX" secondAttribute="centerY" id="CBb-Kn-ZMK"/>
                             <constraint firstItem="NKJ-fJ-84B" firstAttribute="top" secondItem="clR-YQ-inW" secondAttribute="bottom" constant="10" id="Gc4-28-dUS"/>
                             <constraint firstItem="NKJ-fJ-84B" firstAttribute="trailing" secondItem="EyO-eP-RBa" secondAttribute="trailing" constant="-40" id="LWj-Gg-AKx"/>
-                            <constraint firstItem="KhX-XN-VJ2" firstAttribute="leading" secondItem="EyO-eP-RBa" secondAttribute="leading" constant="40" id="XSP-m4-oDO"/>
-                            <constraint firstItem="KhX-XN-VJ2" firstAttribute="bottom" secondItem="EyO-eP-RBa" secondAttribute="bottom" constant="-10" id="cEK-Jd-zs3"/>
+                            <constraint firstItem="9kO-gq-wZA" firstAttribute="bottom" secondItem="EyO-eP-RBa" secondAttribute="bottom" id="NiC-VQ-5bd"/>
+                            <constraint firstItem="9kO-gq-wZA" firstAttribute="centerX" secondItem="Fqe-sq-iMX" secondAttribute="centerX" id="WIU-wd-auL"/>
                             <constraint firstItem="NKJ-fJ-84B" firstAttribute="leading" secondItem="EyO-eP-RBa" secondAttribute="leading" constant="40" id="cMw-qv-krx"/>
-                            <constraint firstItem="EyO-eP-RBa" firstAttribute="trailing" secondItem="KhX-XN-VJ2" secondAttribute="trailing" constant="40" id="eJA-xX-Wv3"/>
-                            <constraint firstItem="KhX-XN-VJ2" firstAttribute="top" secondItem="9kO-gq-wZA" secondAttribute="bottom" constant="20" id="ese-dw-oJt"/>
                             <constraint firstItem="clR-YQ-inW" firstAttribute="top" secondItem="EyO-eP-RBa" secondAttribute="top" constant="40" id="hHa-93-rHj"/>
                             <constraint firstItem="clR-YQ-inW" firstAttribute="leading" secondItem="EyO-eP-RBa" secondAttribute="leading" constant="40" id="hNo-5k-f72"/>
                             <constraint firstItem="9kO-gq-wZA" firstAttribute="leading" secondItem="EyO-eP-RBa" secondAttribute="leading" id="qbh-Tx-RdS"/>
@@ -184,9 +161,6 @@
                     <tabBarItem key="tabBarItem" title="Pausas" image="sun.min" catalog="system" id="fvS-Dk-peb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addPauseLabel" destination="Yio-ht-14K" id="5Eg-vb-yan"/>
-                        <outlet property="botaoFechar" destination="v7Z-6G-SKC" id="Aq6-hN-xAT"/>
-                        <outlet property="botaoSalvar" destination="AQk-fI-6Ly" id="kgF-2p-dGb"/>
                         <outlet property="collectionView" destination="9kO-gq-wZA" id="FLW-x0-i8A"/>
                         <outlet property="nomeAtividadeTextfield" destination="Xzb-Xc-Yv9" id="EFh-b2-kAQ"/>
                         <outlet property="subtitleLabel" destination="NKJ-fJ-84B" id="IBY-dl-pdA"/>
@@ -196,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-s5-FiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204.34782608695653" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-61" y="125"/>
         </scene>
         <!--Timer-->
         <scene sceneID="0MD-17-lUd">
@@ -210,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AdicionarPausa" width="334" height="144"/>
         <image name="background-popup" width="312" height="224"/>
         <image name="button-salvar" width="121" height="45"/>
         <image name="buttonfechar" width="34" height="34"/>
