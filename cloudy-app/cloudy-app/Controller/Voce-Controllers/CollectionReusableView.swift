@@ -13,10 +13,11 @@ class CollectionReusableView: UICollectionReusableView {
    
     @IBOutlet weak var settingsButton: UIButton!
     
-    @IBAction func testaBotao(){
-        print("Tocou na configuracao")
+//    @IBAction func testaBotao(){
+//        print("Tocou na configuracao")
         
-    }
+        
+//    }
     
 
     
