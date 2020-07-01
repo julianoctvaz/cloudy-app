@@ -10,7 +10,7 @@
         <!--Timer View Controller-->
         <scene sceneID="ce8-ev-Kxx">
             <objects>
-                <viewController id="dba-vA-9W2" customClass="TimerViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dba-vA-9W2" customClass="TimerViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NFZ-M0-kCu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,7 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmE-eE-J0G">
-                                <rect key="frame" x="167" y="418" width="79" height="61"/>
+                                <rect key="frame" x="167.5" y="418" width="79" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="YDU-4u-Uoe"/>
                                     <constraint firstAttribute="width" constant="79" id="fQt-IO-G5k"/>
@@ -132,6 +132,7 @@
                     </view>
                     <connections>
                         <outlet property="concludeButton" destination="e6w-Q1-eTx" id="Unt-dl-97N"/>
+                        <outlet property="pausaNameLabel" destination="NeZ-ra-OLz" id="bJF-Ra-Ayo"/>
                         <outlet property="pauseButton" destination="trB-tP-pHl" id="iJN-tF-RnL"/>
                         <outlet property="phraseLabel" destination="7Br-dq-Y0G" id="dhk-ny-usJ"/>
                         <outlet property="selectTimePicker" destination="AmE-eE-J0G" id="ESA-cs-Sbv"/>

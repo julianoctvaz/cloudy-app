@@ -35,8 +35,35 @@ class PausasViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    // Configurar botão Adicionar Pausa
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if let botao = sender as? PausasDataCollectionViewCell {
+            if botao.cardLabel.text == "Adicionar pausa" {
+                return false
+            }
+        }
+        /*
+        guard let botao = sender as? PausasDataCollectionViewCell else {
+            return false
+        }
+        */
 
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "namePausa" {
+            
+        }
+        
+        if let tela = segue.destination as? TimerViewController, let botao = sender as? PausasDataCollectionViewCell {
+            tela.namePausa = botao.cardLabel.text!
+        }
+    }
+    //---------------------------------
 }
+    
 
 extension PausasViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,6 +83,13 @@ extension PausasViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell?.cardLabel.text = labelArray[indexPath.row]
         return cell!
     }
-
+    
+    // Configura botão Adicionar Pausas
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            // isHidden = false
+        }
+    }
+    // --------------------------------
 
 }

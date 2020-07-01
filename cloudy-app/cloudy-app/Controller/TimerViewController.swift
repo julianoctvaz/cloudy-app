@@ -16,10 +16,14 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var concludeButton: UIButton!
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var selectTimePicker: UIPickerView!
+    @IBOutlet weak var pausaNameLabel: UILabel!
+    
+    var namePausa: String = ""
     
     // Variáveis picker
     var minutesPicker = 0
     var secondsPicker = 0
+    
     
     // Configurando o timer
     var seconds = 5 // Esta variável manterá um valor inicial de segundos. Pode ser qualquer valor acima de 0.
@@ -98,6 +102,8 @@ class TimerViewController: UIViewController {
         
         selectTimePicker.dataSource = self
         selectTimePicker.delegate = self
+        
+        self.pausaNameLabel.text = self.namePausa
     }
 }
 

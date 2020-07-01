@@ -14,8 +14,11 @@ class PausasDataCollectionViewCell: UICollectionViewCell {
     
     @IBAction func cardButtonAction(_ sender: Any) {
         print("hello world from " + cardLabel.text!)
+        
     }
     
     @IBOutlet weak var cardLabel: UILabel!
+    
+
     
 }

@@ -11,7 +11,7 @@
         <!--Pausas-->
         <scene sceneID="qhH-H5-SFq">
             <objects>
-                <viewController storyboardIdentifier="PausasViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XIn-AN-LjD" customClass="PausasViewController" customModule="cloudy_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PausasViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XIn-AN-LjD" customClass="PausasViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fqe-sq-iMX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,14 +38,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="oKH-bA-WgR" customClass="PausasDataCollectionViewCell" customModule="cloudy_app" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="oKH-bA-WgR" customClass="PausasDataCollectionViewCell" customModule="Cloudy" customModuleProvider="target">
                                         <rect key="frame" x="25" y="0.0" width="364" height="164"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yMa-2B-LIk">
                                             <rect key="frame" x="0.0" y="0.0" width="364" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-WA-nnS">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-WA-nnS">
                                                     <rect key="frame" x="15" y="0.0" width="334" height="144"/>
                                                     <connections>
                                                         <action selector="cardButtonAction:" destination="oKH-bA-WgR" eventType="touchUpInside" id="xuO-BJ-HWj"/>
@@ -71,6 +71,7 @@
                                         <connections>
                                             <outlet property="cardButton" destination="hIx-WA-nnS" id="und-c9-J7Z"/>
                                             <outlet property="cardLabel" destination="HlJ-8j-UEo" id="WnW-Xn-qtP"/>
+                                            <segue destination="xtO-Z0-7WX" kind="show" id="YuS-A0-Sxs"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -136,6 +137,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-s5-FiC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204.34782608695653" y="124.55357142857142"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="0MD-17-lUd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Timer" id="xtO-Z0-7WX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uri-tV-LBq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hle-Kc-ttb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="125"/>
         </scene>
     </scenes>
     <resources>
