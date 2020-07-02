@@ -402,11 +402,8 @@
 				BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */,
 				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
 				BEA262E124995BCE007F147C /* cloudy_app.xcdatamodeld in Sources */,
-<<<<<<< HEAD
 				179E056024AD5D6D00B65809 /* TabBarViewController.swift in Sources */,
-=======
 				BE9DFE3024ADB44600FAD5A2 /* TimerFeedbackViewController.swift in Sources */,
->>>>>>> timer-feedback
 				7D96C13E24AB704A006FB6AF /* PausasDataCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
