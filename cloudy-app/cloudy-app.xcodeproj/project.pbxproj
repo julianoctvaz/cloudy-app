@@ -168,12 +168,9 @@
 				7D96C13D24AB704A006FB6AF /* PausasDataCollectionViewCell.swift */,
 				7D96C13F24AB829B006FB6AF /* PausasViewController.swift */,
 				BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */,
-<<<<<<< HEAD
 				179E055F24AD5D6D00B65809 /* TabBarViewController.swift */,
 				179E056224AD5E1400B65809 /* SettingsViewController.swift */,
-=======
 				BE9DFE2F24ADB44600FAD5A2 /* TimerFeedbackViewController.swift */,
->>>>>>> timer-feedback
 			);
 			path = Controller;
 			sourceTree = "<group>";
