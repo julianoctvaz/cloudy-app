@@ -577,7 +577,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2QC8C374PG;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = "cloudy-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -596,7 +597,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2QC8C374PG;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 23WSBM7T82;
 				INFOPLIST_FILE = "cloudy-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
