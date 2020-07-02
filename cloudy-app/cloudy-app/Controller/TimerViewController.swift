@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var pauseButton: UIButton!
@@ -17,12 +17,46 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var selectTimePicker: UIPickerView!
     @IBOutlet weak var pausaNameLabel: UILabel!
+    @IBOutlet weak var twoPointsLabel: UILabel!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    /*
+    @IBOutlet weak var imageView0: UIImageView!
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    */
+    @IBOutlet weak var labelDiscretion0: UILabel!
+    @IBOutlet weak var labelDiscretion1: UILabel!
+    @IBOutlet weak var labelDiscretion2: UILabel!
+    @IBOutlet weak var navigation: UINavigationBar!
+    
+    // Variáveis ScrollView
+    var contentWidth: CGFloat = 0.0
+    var imageView0 = UIButton()
+    var imageView1 = UIButton()
+    var imageView2 = UIButton()
     
     var namePausa: String = ""
     
     // Variáveis picker
     var minutesPicker = 0
     var secondsPicker = 0
+    
+    let feedbackVC = FeedbackViewController()
+    
+    // Configura botão fechar modal
+    @IBAction func closedButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func concludeButtonTapped(_ sender: Any) {
+        //dismiss(animated: true, completion: nil)
+        //self.scrollView.isHidden = false
+        print("Affff")
+        //navigationController?.show(FeedbackViewController(), sender: nil)
+        
+    }
     
     
     // Configurando o timer
@@ -45,6 +79,7 @@ class TimerViewController: UIViewController {
             self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
             self.timerLabel.isHidden = false
             self.selectTimePicker.isHidden = true
+            self.twoPointsLabel.isHidden = true
         }
     }
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
@@ -97,6 +132,8 @@ class TimerViewController: UIViewController {
         return String(format: "%02i:%02i", minutes, seconds)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,6 +141,51 @@ class TimerViewController: UIViewController {
         selectTimePicker.delegate = self
         
         self.pausaNameLabel.text = self.namePausa
+        
+        // Configuração ScrollView
+        scrollView.isHidden = true
+        scrollView.delegate = self
+        
+        self.imageView0.setBackgroundImage(UIImage(named: "feedback-image0"), for: .normal)
+        self.imageView1.setBackgroundImage(UIImage(named: "feedback-image1"), for: .normal)
+        self.imageView2.setBackgroundImage(UIImage(named: "feedback-image2"), for: .normal)
+        
+        
+        let xCoordinate0 = view.frame.midX + view.frame.width * CGFloat(0)
+        let xCoordinate1 = view.frame.midX + view.frame.width * CGFloat(1)
+        let xCoordinate2 = view.frame.midX + view.frame.width * CGFloat(2)
+        
+        self.imageView0.frame = CGRect(x: xCoordinate0 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        self.imageView1.frame = CGRect(x: xCoordinate1 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        self.imageView2.frame = CGRect(x: xCoordinate2 - 94, y: (view.frame.height / 2) - 50, width: 189, height: 91)
+        
+        self.labelDiscretion0.frame = CGRect(x: xCoordinate0 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+        self.labelDiscretion1.frame = CGRect(x: xCoordinate1 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+        self.labelDiscretion2.frame = CGRect(x: xCoordinate2 - 55, y: (view.frame.height / 2) - 86, width: 111, height: 333)
+
+        for _ in 0...2 {
+            contentWidth += view.frame.width
+        }
+        
+        scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.height)
+        
+        self.scrollView.addSubview(self.imageView0)
+        self.scrollView.addSubview(self.imageView1)
+        self.scrollView.addSubview(self.imageView2)
+        //------------------------
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        /*
+        print(scrollView.contentOffset)
+        
+        if Int(scrollView.contentOffset.x) % 414 == 0 {
+            pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(414))
+        } else if Int(scrollView.contentOffset.x) % 375 == 0 {
+            pageControl.currentPage = Int(scrollView.contentOffset.x / CGFloat(375))
+        }
+        */
+        
     }
 }
 
@@ -152,3 +234,6 @@ extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
 }
+
+let navigationController = UINavigationController()
+
