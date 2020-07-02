@@ -26,6 +26,7 @@
 		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
 		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
 		BE8DB40424A625CC00ADB966 /* OnboardingDelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */; };
+		BE9DFE3024ADB44600FAD5A2 /* TimerFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9DFE2F24ADB44600FAD5A2 /* TimerFeedbackViewController.swift */; };
 		BEA262D724995BCE007F147C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262D624995BCE007F147C /* AppDelegate.swift */; };
 		BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262D824995BCE007F147C /* SceneDelegate.swift */; };
 		BEA262DB24995BCE007F147C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA262DA24995BCE007F147C /* ViewController.swift */; };
@@ -74,6 +75,7 @@
 		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		BE8DB40324A625CC00ADB966 /* OnboardingDelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDelegateViewController.swift; sourceTree = "<group>"; };
+		BE9DFE2F24ADB44600FAD5A2 /* TimerFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFeedbackViewController.swift; sourceTree = "<group>"; };
 		BEA262D324995BCE007F147C /* Cloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA262D624995BCE007F147C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA262D824995BCE007F147C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */,
 				179E055F24AD5D6D00B65809 /* TabBarViewController.swift */,
 				179E056224AD5E1400B65809 /* SettingsViewController.swift */,
+				BE9DFE2F24ADB44600FAD5A2 /* TimerFeedbackViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
 				BEA262E124995BCE007F147C /* cloudy_app.xcdatamodeld in Sources */,
 				179E056024AD5D6D00B65809 /* TabBarViewController.swift in Sources */,
+				BE9DFE3024ADB44600FAD5A2 /* TimerFeedbackViewController.swift in Sources */,
 				7D96C13E24AB704A006FB6AF /* PausasDataCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

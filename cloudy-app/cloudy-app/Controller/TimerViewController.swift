@@ -17,12 +17,34 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var selectTimePicker: UIPickerView!
     @IBOutlet weak var pausaNameLabel: UILabel!
+    @IBOutlet weak var twoPointsLabel: UILabel!
+    @IBOutlet weak var feedbackView: UIView!
+    @IBOutlet weak var feelingButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var timerView0: UIView!
+    @IBOutlet weak var timerView1: UIView!
+    @IBOutlet weak var emotionDescriptionLabel: UILabel!
     
+    // Variáveis
     var namePausa: String = ""
+    var buttonImageControl = 0
+    let emotionDescriptionText = ["Energizado", "Okay", "Cansado"]
     
     // Variáveis picker
     var minutesPicker = 0
     var secondsPicker = 0
+    
+    // Configura botão fechar modal
+    @IBAction func closedButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func concludeButtonTapped(_ sender: Any) {
+        self.timerView1.isHidden = true
+        self.feedbackView.isHidden = false
+    }
     
     
     // Configurando o timer
@@ -37,14 +59,13 @@ class TimerViewController: UIViewController {
             self.seconds = self.secondsPicker
             self.seconds += self.minutesPicker * 60
             // Muda a label com do timer
-            timerLabel.text = String(format: "%02i:%02i", self.minutesPicker, self.secondsPicker)
+            timerLabel.text = String(format: "%02i : %02i", self.minutesPicker, self.secondsPicker)
             runTimer()
             self.startButton.isEnabled = false
-            self.startButton.isHidden = true
-            self.pauseButton.isHidden = false
             self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
-            self.timerLabel.isHidden = false
-            self.selectTimePicker.isHidden = true
+            
+            self.timerView0.isHidden = true
+            self.timerView1.isHidden = false
         }
     }
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
@@ -55,7 +76,7 @@ class TimerViewController: UIViewController {
         } else {
             runTimer()
             self.resumeTapped = false
-            self.pauseButton.setBackgroundImage(UIImage(named: "pausa-button-timer"), for: .normal)
+            self.pauseButton.setBackgroundImage(UIImage(named: "pausar-button-timer"), for: .normal)
         }
     }
     // Não vamos ultilizar essa função
@@ -94,8 +115,49 @@ class TimerViewController: UIViewController {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
-        return String(format: "%02i:%02i", minutes, seconds)
+        return String(format: "%02i : %02i", minutes, seconds)
     }
+    
+    // Configura ação de fechar modal tocando no X
+    @IBAction func closeModalTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // Configura tela de feedback
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        if buttonImageControl == 0 {
+            buttonImageControl = 1
+        } else if buttonImageControl == 1 {
+            buttonImageControl = 2
+        } else {
+            buttonImageControl = 0
+        }
+        self.feelingButton.setBackgroundImage(UIImage(named: "feedback-image\(buttonImageControl)"), for: .normal)
+        self.emotionDescriptionLabel.text = self.emotionDescriptionText[buttonImageControl]
+        self.pageControl.currentPage = buttonImageControl
+    }
+    
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        if buttonImageControl == 0 {
+            buttonImageControl = 2
+        } else if buttonImageControl == 1 {
+            buttonImageControl = 0
+        } else {
+            buttonImageControl = 1
+        }
+        self.feelingButton.setBackgroundImage(UIImage(named: "feedback-image\(buttonImageControl)"), for: .normal)
+        self.emotionDescriptionLabel.text = self.emotionDescriptionText[buttonImageControl]
+        self.pageControl.currentPage = buttonImageControl
+    }
+    
+    // Enviar qual emoção vou escolhida
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let tela = segue.destination as? TimerFeedbackViewController {
+            tela.nameEmotion = self.emotionDescriptionText[self.buttonImageControl]
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +166,12 @@ class TimerViewController: UIViewController {
         selectTimePicker.delegate = self
         
         self.pausaNameLabel.text = self.namePausa
+        
+        feedbackView.isHidden = true
+        timerView1.isHidden = true
+        
     }
+    
 }
 
 extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -152,3 +219,4 @@ extension TimerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
 }
+
