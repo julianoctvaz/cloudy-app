@@ -38,6 +38,9 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         
         //Esconder o teclado
         hideKeyboard()
+        
+        //Deactivate save button
+        toggleButton(deactivate: true)
     }
     
     func addPausa(){
@@ -78,7 +81,7 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         
         //Desativar botão salvar se o textfield estiver vazio
         botaoSalvarOutlet.isEnabled = false
-        botaoSalvarOutlet.alpha = 0.5
+        botaoSalvarOutlet.alpha = 0.7
         
         //Listen for changes in text fields to disable save button
         nomeAtividadeTextfield.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
@@ -141,7 +144,7 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         //Deactivates button if there's an empty text field
         if (deactivate){
             botaoSalvarOutlet.isEnabled = false
-            botaoSalvarOutlet.alpha = 0.5
+            botaoSalvarOutlet.alpha = 0.7
         } else {
             botaoSalvarOutlet.isEnabled = true
             botaoSalvarOutlet.alpha = 1.0
