@@ -25,8 +25,12 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var timerView0: UIView!
     @IBOutlet weak var timerView1: UIView!
+    @IBOutlet weak var emotionDescriptionLabel: UILabel!
     
+    // Variáveis
     var namePausa: String = ""
+    var buttonImageControl = 0
+    let emotionDescriptionText = ["Energizado", "Okay", "Cansado"]
     
     // Variáveis picker
     var minutesPicker = 0
@@ -120,9 +124,36 @@ class TimerViewController: UIViewController {
         return String(format: "%02i : %02i", minutes, seconds)
     }
     
-    
+    // Configura ação de fechar modal tocando no X
     @IBAction func closeModalTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // Configura tela de feedback
+    @IBAction func rightButtonTapped(_ sender: Any) {
+        if buttonImageControl == 0 {
+            buttonImageControl = 1
+        } else if buttonImageControl == 1 {
+            buttonImageControl = 2
+        } else {
+            buttonImageControl = 0
+        }
+        self.feelingButton.setBackgroundImage(UIImage(named: "feedback-image\(buttonImageControl)"), for: .normal)
+        self.emotionDescriptionLabel.text = self.emotionDescriptionText[buttonImageControl]
+        self.pageControl.currentPage = buttonImageControl
+    }
+    
+    @IBAction func leftButtonTapped(_ sender: Any) {
+        if buttonImageControl == 0 {
+            buttonImageControl = 2
+        } else if buttonImageControl == 1 {
+            buttonImageControl = 0
+        } else {
+            buttonImageControl = 1
+        }
+        self.feelingButton.setBackgroundImage(UIImage(named: "feedback-image\(buttonImageControl)"), for: .normal)
+        self.emotionDescriptionLabel.text = self.emotionDescriptionText[buttonImageControl]
+        self.pageControl.currentPage = buttonImageControl
     }
     
     
@@ -132,7 +163,6 @@ class TimerViewController: UIViewController {
         selectTimePicker.dataSource = self
         selectTimePicker.delegate = self
         
-        print(self.pausaNameLabel.text)
         self.pausaNameLabel.text = self.namePausa
         
         feedbackView.isHidden = true
