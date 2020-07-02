@@ -88,17 +88,39 @@ class CollectionViewController: UICollectionViewController {
     
     
     
-    
+     
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Selected Cell: \(dataSource[indexPath.row])")
+        
+        if (dataSource[indexPath.row] == "Cumulus"){
+          //  self.alerta.isHidden = false
+            
+        }
+        
     }
     
+   // let alerta = UIButton()
+    
+   // override func loadView() {
+        //https://github.com/julianoctvaz/jardimHarmonico/blob/master/jardimHarmonico.playground/Sources/1-OnboardingViewController.swift
+//
+//        self.alerta.frame = CGRect(x: 41, y: 341, width: 334, height: 336)
+//        self.alerta.setImage(UIImage(named: "fundoBotaoAlerta"), for: .normal)
+//        self.alerta.isHidden = true
+        
+//        view.addSubview(alerta)
+//        
+//        //Target Button
+//        self.alerta.addTarget(self, action: #selector(touchedButtonAlerta), for: .touchUpInside)
+    //}
+    
+//    @IBAction func touchedButtonAlerta() {
+//        self.alerta.isHidden = true
+//
+//    }
 
-    
-    
-    
     
   
     override func collectionView(_ collectionView: UICollectionView,
