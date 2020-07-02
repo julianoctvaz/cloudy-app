@@ -18,6 +18,13 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var selectTimePicker: UIPickerView!
     @IBOutlet weak var pausaNameLabel: UILabel!
     @IBOutlet weak var twoPointsLabel: UILabel!
+    @IBOutlet weak var feedbackView: UIView!
+    @IBOutlet weak var feelingButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var timerView0: UIView!
+    @IBOutlet weak var timerView1: UIView!
     
     var namePausa: String = ""
     
@@ -33,7 +40,8 @@ class TimerViewController: UIViewController {
     @IBAction func concludeButtonTapped(_ sender: Any) {
         //dismiss(animated: true, completion: nil)
         print("Affff")
-        
+        self.timerView1.isHidden = true
+        self.feedbackView.isHidden = false
     }
     
     
@@ -49,15 +57,17 @@ class TimerViewController: UIViewController {
             self.seconds = self.secondsPicker
             self.seconds += self.minutesPicker * 60
             // Muda a label com do timer
-            timerLabel.text = String(format: "%02i:%02i", self.minutesPicker, self.secondsPicker)
+            timerLabel.text = String(format: "%02i : %02i", self.minutesPicker, self.secondsPicker)
             runTimer()
             self.startButton.isEnabled = false
-            self.startButton.isHidden = true
-            self.pauseButton.isHidden = false
+            //self.startButton.isHidden = true
+            //self.pauseButton.isHidden = false
             self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
-            self.timerLabel.isHidden = false
-            self.selectTimePicker.isHidden = true
-            self.twoPointsLabel.isHidden = true
+            //self.timerLabel.isHidden = false
+            //self.selectTimePicker.isHidden = true
+            //self.twoPointsLabel.isHidden = true
+            self.timerView0.isHidden = true
+            self.timerView1.isHidden = false
         }
     }
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
@@ -68,7 +78,7 @@ class TimerViewController: UIViewController {
         } else {
             runTimer()
             self.resumeTapped = false
-            self.pauseButton.setBackgroundImage(UIImage(named: "pausa-button-timer"), for: .normal)
+            self.pauseButton.setBackgroundImage(UIImage(named: "pausar-button-timer"), for: .normal)
         }
     }
     // Não vamos ultilizar essa função
@@ -107,9 +117,13 @@ class TimerViewController: UIViewController {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
-        return String(format: "%02i:%02i", minutes, seconds)
+        return String(format: "%02i : %02i", minutes, seconds)
     }
     
+    
+    @IBAction func closeModalTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -118,7 +132,11 @@ class TimerViewController: UIViewController {
         selectTimePicker.dataSource = self
         selectTimePicker.delegate = self
         
+        print(self.pausaNameLabel.text)
         self.pausaNameLabel.text = self.namePausa
+        
+        feedbackView.isHidden = true
+        timerView1.isHidden = true
         
     }
     
