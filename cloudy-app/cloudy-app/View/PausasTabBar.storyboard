@@ -161,6 +161,7 @@
                     <tabBarItem key="tabBarItem" title="Pausas" image="sun.min" catalog="system" id="fvS-Dk-peb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="botaoSalvarOutlet" destination="AQk-fI-6Ly" id="uHU-Gj-PkZ"/>
                         <outlet property="collectionView" destination="9kO-gq-wZA" id="FLW-x0-i8A"/>
                         <outlet property="nomeAtividadeTextfield" destination="Xzb-Xc-Yv9" id="EFh-b2-kAQ"/>
                         <outlet property="subtitleLabel" destination="NKJ-fJ-84B" id="IBY-dl-pdA"/>
