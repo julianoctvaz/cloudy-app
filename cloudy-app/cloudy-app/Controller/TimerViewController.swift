@@ -42,8 +42,6 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func concludeButtonTapped(_ sender: Any) {
-        //dismiss(animated: true, completion: nil)
-        print("Affff")
         self.timerView1.isHidden = true
         self.feedbackView.isHidden = false
     }
@@ -64,12 +62,8 @@ class TimerViewController: UIViewController {
             timerLabel.text = String(format: "%02i : %02i", self.minutesPicker, self.secondsPicker)
             runTimer()
             self.startButton.isEnabled = false
-            //self.startButton.isHidden = true
-            //self.pauseButton.isHidden = false
             self.phraseLabel.text = "Aproveite a sua pausa! \nVocê merece!"
-            //self.timerLabel.isHidden = false
-            //self.selectTimePicker.isHidden = true
-            //self.twoPointsLabel.isHidden = true
+            
             self.timerView0.isHidden = true
             self.timerView1.isHidden = false
         }
@@ -154,6 +148,14 @@ class TimerViewController: UIViewController {
         self.feelingButton.setBackgroundImage(UIImage(named: "feedback-image\(buttonImageControl)"), for: .normal)
         self.emotionDescriptionLabel.text = self.emotionDescriptionText[buttonImageControl]
         self.pageControl.currentPage = buttonImageControl
+    }
+    
+    // Enviar qual emoção vou escolhida
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let tela = segue.destination as? TimerFeedbackViewController {
+            tela.nameEmotion = self.emotionDescriptionText[self.buttonImageControl]
+        }
     }
     
     

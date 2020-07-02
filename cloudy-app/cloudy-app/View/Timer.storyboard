@@ -255,16 +255,6 @@
             </objects>
             <point key="canvasLocation" x="-200.00000000000003" y="194.86607142857142"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="S0G-cM-js9">
-            <objects>
-                <tableViewController id="uha-0X-LU8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Jwh-gp-hvj"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhd-Zj-8cG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="722" y="-575"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="2f6-QE-dmR">
             <objects>
@@ -281,17 +271,72 @@
             </objects>
             <point key="canvasLocation" x="-199" y="-575"/>
         </scene>
-        <!--Timer View Controller-->
+        <!--Timer Feedback View Controller-->
         <scene sceneID="dLL-5O-oyL">
             <objects>
-                <viewController id="JAY-1Z-LXh" customClass="TimerViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JAY-1Z-LXh" customClass="TimerFeedbackViewController" customModule="Cloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ByJ-JV-pQf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que bom que a sua pausa foi restauradora! Você sabia que pausas revigoram a mente e estimulam a criatividade?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdC-9K-n4O">
+                                <rect key="frame" x="64.5" y="350" width="285" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="Dnf-70-S4K"/>
+                                    <constraint firstAttribute="width" constant="285" id="s11-MS-Mqx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.2746230066" green="0.27609530090000001" blue="0.32377952339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Energizado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-yE-SYp">
+                                <rect key="frame" x="129" y="279" width="156" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="3TN-9w-gxl"/>
+                                    <constraint firstAttribute="height" constant="41" id="nak-9w-vq0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="0.2746230066" green="0.27609530090000001" blue="0.32377952339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback-image-0" translatesAutoresizingMaskIntoConstraints="NO" id="hZg-kA-3mr">
+                                <rect key="frame" x="68.5" y="115" width="277" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="Ulu-zy-434"/>
+                                    <constraint firstAttribute="height" constant="134" id="vbU-CS-wcH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4a-s5-lUr">
+                                <rect key="frame" x="168" y="590" width="78" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="2Dc-al-BKd"/>
+                                    <constraint firstAttribute="height" constant="45" id="NJu-Pp-2vw"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="feedback-button-ok"/>
+                                <connections>
+                                    <action selector="okButtonTapped:" destination="JAY-1Z-LXh" eventType="touchUpInside" id="gY5-cW-uJs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H4a-s5-lUr" firstAttribute="centerX" secondItem="ByJ-JV-pQf" secondAttribute="centerX" id="02x-Dd-tMN"/>
+                            <constraint firstItem="H4a-s5-lUr" firstAttribute="top" secondItem="DdC-9K-n4O" secondAttribute="bottom" constant="98" id="D1R-9R-n5V"/>
+                            <constraint firstItem="DdC-9K-n4O" firstAttribute="centerX" secondItem="ByJ-JV-pQf" secondAttribute="centerX" id="H0C-JS-et6"/>
+                            <constraint firstItem="hZg-kA-3mr" firstAttribute="centerX" secondItem="ByJ-JV-pQf" secondAttribute="centerX" id="HkL-hX-1QC"/>
+                            <constraint firstItem="DdC-9K-n4O" firstAttribute="top" secondItem="rrb-yE-SYp" secondAttribute="bottom" constant="30" id="TO7-X0-gAP"/>
+                            <constraint firstItem="DdC-9K-n4O" firstAttribute="centerY" secondItem="ByJ-JV-pQf" secondAttribute="centerY" id="TfD-SX-MB9"/>
+                            <constraint firstItem="rrb-yE-SYp" firstAttribute="centerX" secondItem="ByJ-JV-pQf" secondAttribute="centerX" id="Uvo-yH-rgG"/>
+                            <constraint firstItem="rrb-yE-SYp" firstAttribute="top" secondItem="hZg-kA-3mr" secondAttribute="bottom" constant="30" id="xFx-SX-DcN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2lT-Ij-NPT"/>
                     </view>
                     <navigationItem key="navigationItem" id="hLC-aM-J7x"/>
+                    <connections>
+                        <outlet property="emotionImage" destination="hZg-kA-3mr" id="BsZ-Vx-aG5"/>
+                        <outlet property="emotionText" destination="DdC-9K-n4O" id="dyd-Xv-J0f"/>
+                        <outlet property="emotionTitle" destination="rrb-yE-SYp" id="qdt-D7-bfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ybB-AL-5pJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -311,7 +356,9 @@
     <resources>
         <image name="concluir-button-timer" width="441" height="135"/>
         <image name="feedback-button-left" width="111" height="111"/>
+        <image name="feedback-button-ok" width="235" height="135"/>
         <image name="feedback-button-right" width="111" height="111"/>
+        <image name="feedback-image-0" width="557" height="269"/>
         <image name="feedback-image0" width="589" height="297"/>
         <image name="pausar-button-timer" width="441" height="135"/>
         <image name="start-timer-button" width="690" height="135"/>
