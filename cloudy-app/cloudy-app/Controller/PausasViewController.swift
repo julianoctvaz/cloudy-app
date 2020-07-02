@@ -67,14 +67,8 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     }
 
     //Backgrounds e labels dos itens da Collection View
-    var backgroundArray = ["AdicionarPausa",
-                           "Atividade1",
-                           "Atividade2",
-                           "Atividade3"]
-    var labelArray = ["Adicionar pausa",
-                      "Yoga",
-                      "Origami",
-                      "Observar as nuvens"]
+    var backgroundArray = ["AdicionarPausa"]
+    var labelArray = ["Adicionar pausa"]
 
 
     override func viewDidLoad() {
