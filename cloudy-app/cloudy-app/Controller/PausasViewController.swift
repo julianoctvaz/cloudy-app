@@ -13,7 +13,8 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
+    @IBOutlet weak var botaoSalvarOutlet: UIButton!
     @IBOutlet weak var viewPopup: UIView!
     @IBOutlet weak var nomeAtividadeTextfield: UITextField!
     
@@ -37,6 +38,9 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         
         //Esconder o teclado
         hideKeyboard()
+        
+        //Deactivate save button
+        toggleButton(deactivate: true)
     }
     
     func addPausa(){
@@ -74,6 +78,13 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         viewPopup.isHidden = true
+        
+        //Desativar botão salvar se o textfield estiver vazio
+        botaoSalvarOutlet.isEnabled = false
+        botaoSalvarOutlet.alpha = 0.7
+        
+        //Listen for changes in text fields to disable save button
+        nomeAtividadeTextfield.addTarget(self, action: #selector(textChanged(_:)), for: .editingChanged)
     }
     
     //Configurar botão Adicionar Pausa
@@ -122,6 +133,23 @@ class PausasViewController: UIViewController, UITextFieldDelegate{
         nomeAtividadeTextfield.resignFirstResponder()
     }
     
+    // MARK: Desativar botão de salvar se o texfield estiver vazio
+    @objc func textChanged(_ textField: UITextField){
+        //Checks if any of the text fields is empty
+        let thereIsAnEmptyTextField = [nomeAtividadeTextfield].contains { $0.text!.isEmpty }
+        toggleButton(deactivate: thereIsAnEmptyTextField)
+    }
+    
+    func toggleButton(deactivate: Bool){
+        //Deactivates button if there's an empty text field
+        if (deactivate){
+            botaoSalvarOutlet.isEnabled = false
+            botaoSalvarOutlet.alpha = 0.7
+        } else {
+            botaoSalvarOutlet.isEnabled = true
+            botaoSalvarOutlet.alpha = 1.0
+        }
+    }
     
 }
     
