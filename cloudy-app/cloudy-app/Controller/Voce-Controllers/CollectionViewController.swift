@@ -121,7 +121,7 @@ class CollectionViewController: UICollectionViewController {
     //
     //    }
     
-    
+    var salva = UICollectionReusableView()
     
     override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
@@ -154,6 +154,7 @@ class CollectionViewController: UICollectionViewController {
         default:
             assert(false, "Invalid element type")
         }
+        return salva
     }
     
 }
