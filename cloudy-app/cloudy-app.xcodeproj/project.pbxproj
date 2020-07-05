@@ -20,8 +20,6 @@
 		BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */; };
 		BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4B124AA3BD70002E56F /* Timer.storyboard */; };
 		BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */; };
-		BE6DB4D624ABA4A80002E56F /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */; };
-		BE6DB4F824ABDEF60002E56F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */; };
 		BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */; };
 		BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */; };
 		BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8DB40124A6132100ADB966 /* DataViewController.swift */; };
@@ -69,8 +67,6 @@
 		BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoceTabBar.storyboard; sourceTree = "<group>"; };
 		BE6DB4B124AA3BD70002E56F /* Timer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
-		BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		BE8DB3FD24A6115A00ADB966 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		BE8DB3FF24A612C200ADB966 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		BE8DB40124A6132100ADB966 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 				BE6DB4AD24AA32840002E56F /* SeuCeuTabBar.storyboard */,
 				BE6DB4AF24AA32910002E56F /* VoceTabBar.storyboard */,
 				BE6DB4B124AA3BD70002E56F /* Timer.storyboard */,
-				BE6DB4D524ABA4A80002E56F /* Feedback.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,7 +162,6 @@
 				BE6DB4D324AB5C9E0002E56F /* TimerViewController.swift */,
 				7D96C13D24AB704A006FB6AF /* PausasDataCollectionViewCell.swift */,
 				7D96C13F24AB829B006FB6AF /* PausasViewController.swift */,
-				BE6DB4F724ABDEF60002E56F /* FeedbackViewController.swift */,
 				179E055F24AD5D6D00B65809 /* TabBarViewController.swift */,
 				179E056224AD5E1400B65809 /* SettingsViewController.swift */,
 				BE9DFE2F24ADB44600FAD5A2 /* TimerFeedbackViewController.swift */,
@@ -358,7 +352,6 @@
 				BE6DB4B224AA3BD70002E56F /* Timer.storyboard in Resources */,
 				BEA262E324995BD2007F147C /* Assets.xcassets in Resources */,
 				BE6DB4B024AA32910002E56F /* VoceTabBar.storyboard in Resources */,
-				BE6DB4D624ABA4A80002E56F /* Feedback.storyboard in Resources */,
 				BEA262DE24995BCE007F147C /* Main.storyboard in Resources */,
 				BE8DB3FE24A6115A00ADB966 /* Onboarding.storyboard in Resources */,
 			);
@@ -394,7 +387,6 @@
 				BEA262D924995BCE007F147C /* SceneDelegate.swift in Sources */,
 				179E056324AD5E1400B65809 /* SettingsViewController.swift in Sources */,
 				176D95A024ABA0DB005786CD /* CollectionViewController.swift in Sources */,
-				BE6DB4F824ABDEF60002E56F /* FeedbackViewController.swift in Sources */,
 				BE6DB4D424AB5C9E0002E56F /* TimerViewController.swift in Sources */,
 				BE8DB40024A612C200ADB966 /* CustomPageViewController.swift in Sources */,
 				BE8DB40224A6132100ADB966 /* DataViewController.swift in Sources */,
