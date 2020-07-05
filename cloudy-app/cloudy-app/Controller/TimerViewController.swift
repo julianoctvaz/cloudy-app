@@ -42,6 +42,7 @@ class TimerViewController: UIViewController {
     }
     
     @IBAction func concludeButtonTapped(_ sender: Any) {
+        self.phraseLabel.text = "Como você se sente depois desta pausa?"
         self.timerView1.isHidden = true
         self.feedbackView.isHidden = false
     }
