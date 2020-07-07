@@ -28,7 +28,7 @@ class TimerFeedbackViewController: UIViewController {
             emotionText.text = "Parabéns por ter tirado um tempo para você! Você sabia que fazer uma pausa para se movimentar traz benefícios pra sua saúde física e mental?"
         } else {
             emotionImage.image = UIImage(named: "feedback-image-2")
-            emotionText.text = "Talvez você precise de uma pausa mais longa... \nTá tudo bem. Lembre de ser gentil com você mesmo."
+            emotionText.text = "Talvez você precise de uma pausa mais longa... Tá tudo bem. Lembre de ser gentil com você mesmo."
         }
         
         // Define cores
