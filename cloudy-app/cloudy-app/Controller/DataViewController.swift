@@ -32,6 +32,16 @@ class DataViewController: UIViewController {
         } else {
             hideStartButton()
         }
+        
+        // Define cores
+        let azulEscuro = #colorLiteral(red: 0.6390188336, green: 0.7620211244, blue: 0.9999124408, alpha: 1)//UIColor(red: 165/255.0, green: 192/255.0, blue: 250/255.0, alpha: 1)
+        let azulClaro = #colorLiteral(red: 0.8876758218, green: 0.9017826915, blue: 0.9792668223, alpha: 1)//UIColor(red: 227/255.0, green: 230/255.0, blue: 248/255.0, alpha: 1)
+        
+        // Gradiente:
+        let newLayer = CAGradientLayer()
+        newLayer.colors = [azulEscuro.cgColor, azulClaro.cgColor]
+        newLayer.frame = view.frame
+        view.layer.insertSublayer(newLayer, at: 0)
         // Do any additional setup after loading the view.
     }
     

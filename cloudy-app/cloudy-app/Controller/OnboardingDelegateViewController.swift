@@ -20,11 +20,16 @@ class OnboardingDelegateViewController: UIViewController {
                       "Descubra as pausas que fazem você se sentir melhor",
                       "Crie lembretes para momentos de pausa que tornam o seu dia mais leve"]
     
-    let dataSourceImage: [UIImage] = [UIImage(imageLiteralResourceName: "Onboarding1"),
+    /*let dataSourceImage: [UIImage] = [UIImage(imageLiteralResourceName: "Onboarding1"),
                                       UIImage(imageLiteralResourceName: "Onboarding2"),
                                       UIImage(imageLiteralResourceName: "Onboarding3"),
                                       UIImage(imageLiteralResourceName: "Onboarding4"),
-                                      UIImage(imageLiteralResourceName: "Onboarding5")]
+                                      UIImage(imageLiteralResourceName: "Onboarding5")]*/
+    let dataSourceImage: [UIImage] = [UIImage(imageLiteralResourceName: "Onboarding1-2"),
+    UIImage(imageLiteralResourceName: "Onboarding2-2"),
+    UIImage(imageLiteralResourceName: "Onboarding3-2"),
+    UIImage(imageLiteralResourceName: "Onboarding4-2"),
+    UIImage(imageLiteralResourceName: "Onboarding5-2")]
     
     var currentViewControllerIndex = 0
     
